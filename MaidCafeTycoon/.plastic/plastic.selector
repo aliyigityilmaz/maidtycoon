@@ -1,0 +1,4 @@
+repository "MaidCafeTycoon@MasterProject@cloud"
+  path "/"
+    br "/main"
+    co "/main"
