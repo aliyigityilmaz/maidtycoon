@@ -27,4 +27,9 @@ public class EconomyManager : MonoBehaviour
     {
         moneyCountText.text = money.ToString();
     }
+
+    public void AddMoney(int amount)
+    {
+        money += amount;
+    }
 }

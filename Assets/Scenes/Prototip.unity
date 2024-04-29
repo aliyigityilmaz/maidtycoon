@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 510513733}
   m_Layer: 0
   m_Name: ShortTable
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 668587934}
   m_Layer: 0
   m_Name: ShortTable
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1963,7 +1963,7 @@ GameObject:
   - component: {fileID: 788827596}
   m_Layer: 0
   m_Name: ShortTable
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3506,7 +3506,7 @@ GameObject:
   - component: {fileID: 1404564824}
   m_Layer: 0
   m_Name: ShortTable
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

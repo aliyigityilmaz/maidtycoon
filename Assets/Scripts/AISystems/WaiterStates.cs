@@ -134,6 +134,7 @@ public class WaiterStates : MonoBehaviour
             assignedCustomer.GetComponent<CustomerStates>().Eat();
             assignedCustomer = null;
             hasFood = false;
+            EconomyManager.instance.AddMoney(food.GetComponent<Food>().foodso.foodValue);
             Destroy(food);
             food = null;
             currentState = State.Idle;

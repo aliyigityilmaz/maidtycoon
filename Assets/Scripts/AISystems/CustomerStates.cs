@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class CustomerStates : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class CustomerStates : MonoBehaviour
     public int customerID;
 
     private bool left;
+    GameObject closestTable = null;
     private enum State
     {
         Searching,
@@ -98,7 +100,11 @@ public class CustomerStates : MonoBehaviour
     }
 
     private void WaitingOrder()
-    { 
+    {
+        FindClosestTable();
+        Vector3 direction = closestTable.transform.position - transform.position;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+
         if (!ReadyToOrder)
         {
             OrderSystem.instance.AddWaitingList(this.gameObject);
@@ -191,6 +197,21 @@ public class CustomerStates : MonoBehaviour
     {
         attendedWaiter = null;
         waiterAttended = false;
+    }
+
+    private void FindClosestTable()
+    {
+        GameObject[] tables = GameObject.FindGameObjectsWithTag("Table");
+        float minDistance = Mathf.Infinity;
+        foreach (GameObject table in tables)
+        {
+            float distance = Vector3.Distance(this.transform.position, table.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestTable = table;
+            }
+        }
     }
 
 

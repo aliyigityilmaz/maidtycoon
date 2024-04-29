@@ -6,4 +6,5 @@ public class Food : MonoBehaviour
 {
     public FoodSO foodso;    
     public int id;
+    public int value;
 }
