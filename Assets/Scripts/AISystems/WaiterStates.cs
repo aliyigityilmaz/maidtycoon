@@ -102,20 +102,37 @@ public class WaiterStates : MonoBehaviour
         if (counter != null)
         {
             agent.SetDestination(counter.transform.position);
-            if (Vector3.Distance(this.transform.position, counter.transform.position) < 0.5f)
+            if (Vector3.Distance(this.transform.position, counter.transform.position) < 0.5f && hasFood == false)
             {
-                food = GameObject.FindGameObjectWithTag("Food");
-                food.transform.SetParent(carry);
-                food.transform.position = carry.transform.position;
-                OrderSystem.instance.OrderCompleted(food);
-                hasFood = true;
-                currentState = State.Serve;
+                 GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
+                foreach (GameObject carriedfood in foods)
+                {
+                    if (carriedfood.GetComponent<Food>().taken == false)
+                    {
+                        carriedfood.transform.SetParent(carry);
+                        carriedfood.transform.position = carry.transform.position;
+                        OrderSystem.instance.OrderCompleted(carriedfood);
+                        hasFood = true;
+                        food = carriedfood;
+                        currentState = State.Serve;
+                    }
+                }
             }
+        }
+        if (hasFood)
+        {
+            currentState = State.Serve;
         }
     }
 
     private void Serve()
     {
+        if (food == null)
+        {
+            currentState = State.Idle;
+            return;
+        }
+        food.GetComponent<Food>().taken = true;
         int id = food.GetComponent<Food>().id;
         foreach (GameObject customer in GameManager.instance.seatedCustomer)
         {
@@ -143,23 +160,39 @@ public class WaiterStates : MonoBehaviour
 
     private void GoCustomer()
     {
-        assignedCustomer = OrderSystem.instance.waitingToOrder[0];
-        if (assignedCustomer == null)
+        GameObject[] customers = GameObject.FindGameObjectsWithTag("Customer");
+        if (assignedCustomer == false)
         {
-            currentState = State.Idle;
-            return;
+            foreach (GameObject customer in customers)
+            {
+                if (customer != null)
+                {
+                    if (OrderSystem.instance.waitingToOrder.Contains(customer))
+                    {
+                        if (customer.GetComponent<CustomerStates>().waiterAttended == false)
+                        {
+                            assignedCustomer = customer;
+                            foundaCustomer = true;
+                            assignedCustomer.GetComponent<CustomerStates>().attendWaiter(this.gameObject);
+
+                            OrderSystem.instance.RemoveFromWaitingList(assignedCustomer);
+                            break;
+                        }
+                        else
+                        {
+                            currentState = State.Idle;
+                        }
+                    }
+                }
+                else
+                {
+                    currentState = State.Idle;
+                }
+            }
         }
-        else
-        {
-            assignedCustomer.GetComponent<CustomerStates>().attendWaiter(this.gameObject);
-        }
-        if (!foundaCustomer && assignedCustomer)
+        if (foundaCustomer)
         {
             agent.SetDestination(assignedCustomer.transform.position);
-            foundaCustomer = true;
-        }
-        else if (foundaCustomer)
-        {
             if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
             {
                 Debug.Log("Arrived at customer");
@@ -186,12 +219,12 @@ public class WaiterStates : MonoBehaviour
     {
         Debug.Log("Taking Order");
         tookOrder = true;
-        yield return new WaitForSeconds(5);
-        currentState = State.TakeOrder;
+        yield return new WaitForSeconds(1);
         assignedCustomer.GetComponent<CustomerStates>().Order();
-        OrderSystem.instance.RemoveFromWaitingList(assignedCustomer);
         assignedCustomer.GetComponent<CustomerStates>().leaveWaiter();
         assignedCustomer = null;
+        currentState = State.Idle;
+        Debug.Log("Berkay mal");
     }
 
     private void Idle()
@@ -200,7 +233,7 @@ public class WaiterStates : MonoBehaviour
         agent.SetDestination(this.transform.position);
         if (agent != null)
         {
-            if (OrderSystem.instance.waitingToOrder.Count > 0 && CustomerStates.instance.waiterAttended == false)
+            if (OrderSystem.instance.waitingToOrder.Count > 0)
             {
                 currentState = State.GoCustomer;
             }
@@ -213,5 +246,23 @@ public class WaiterStates : MonoBehaviour
                 currentState = State.Idle;
             }
         }
+    }
+
+    private bool IsCustomerEmpty()
+    {
+        GameObject[] customers = GameObject.FindGameObjectsWithTag("Customer");
+        foreach (GameObject customer in customers)
+        {
+            if (customer.GetComponent<CustomerStates>().waiterAttended == false)
+            {
+                return true;
+                
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
     }
 }

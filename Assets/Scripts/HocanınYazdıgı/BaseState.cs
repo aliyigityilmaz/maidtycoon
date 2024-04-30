@@ -5,9 +5,9 @@ using UnityEngine;
 
 public abstract class BaseState
 {
-    public abstract void StartState();
-    public abstract void UpdateState();
+    public abstract void StartState(BaseStateMachine machine);
+    public abstract void UpdateState(BaseStateMachine machine);
 
-    public abstract void LeaveState();
+    public abstract void LeaveState(BaseStateMachine machine);
 
 }

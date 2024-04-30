@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TakeOrderState : BaseState
 {
-    public override void StartState()
+    public override void StartState(BaseStateMachine machine)
     {
     }
 
-    public override void UpdateState()
+    public override void UpdateState(BaseStateMachine machine)
     {
     }
 
-    public override void LeaveState()
+    public override void LeaveState(BaseStateMachine machine)
     {
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Food
   - Exit
   - Table
+  - Customer
   layers:
   - Default
   - TransparentFX
