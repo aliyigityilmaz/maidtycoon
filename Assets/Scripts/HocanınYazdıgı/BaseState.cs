@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,4 +11,13 @@ public abstract class BaseState
 
     public abstract void LeaveState(BaseStateMachine machine);
 
+    internal void StartState()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void UpdateState()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class BaseStateMachine : MonoBehaviour
 {
 
-    public abstract ChangeState(BaseState state);
+    public abstract void ChangeState(BaseState state);
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WaiterStateMachine : BaseStateMachine
@@ -38,9 +39,14 @@ public class WaiterStateMachine : BaseStateMachine
         currentState.UpdateState();
     }
 
-    public void ChangeState(BaseState state)
+    public void ChangingState(BaseState state)
     {
         this.currentState = state;
         this.currentState.StartState();
+    }
+
+    public override void ChangeState(BaseState state)
+    {
+        throw new System.NotImplementedException();
     }
 }

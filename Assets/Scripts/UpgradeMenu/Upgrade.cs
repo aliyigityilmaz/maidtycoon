@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Upgrade : MonoBehaviour
 {
     public bool hasMoney;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,9 @@ public class Upgrade : MonoBehaviour
             hasMoney = false;
         }
     }
-    public void WaiterSpeed()
+    public void WaiterSpeed(float multiply)
     {
-
+        WaiterStates.instance.agentSpeed += multiply;
     }
     public void RequiredMoney(int moneyAmount)
     {

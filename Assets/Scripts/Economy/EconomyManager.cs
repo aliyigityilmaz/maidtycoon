@@ -26,6 +26,10 @@ public class EconomyManager : MonoBehaviour
     void Update()
     {
         moneyCountText.text = money.ToString();
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            AddMoney(100);
+        }
     }
 
     public void AddMoney(int amount)

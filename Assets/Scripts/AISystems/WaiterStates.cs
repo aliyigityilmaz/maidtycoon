@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class WaiterStates : MonoBehaviour
 {
+    public static WaiterStates instance;
+
     NavMeshAgent agent;
     private bool hasFood = false;
     public GameObject counter;
@@ -31,7 +33,7 @@ public class WaiterStates : MonoBehaviour
     public bool isGoCustomer;
     public bool isServe;
 
-
+    public float agentSpeed = 8;
     private enum State
     {
         Idle,
@@ -47,6 +49,8 @@ public class WaiterStates : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         currentState = State.Idle;
+        instance = this;
+        //agent.acceleration = agentSpeed;
     }
 
 
