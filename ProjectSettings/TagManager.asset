@@ -9,6 +9,7 @@ TagManager:
   - Exit
   - Table
   - Customer
+  - Waiter
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Placement Layer
-  - 
-  - 
+  - Maid
+  - Customer
   - 
   - 
   - 
