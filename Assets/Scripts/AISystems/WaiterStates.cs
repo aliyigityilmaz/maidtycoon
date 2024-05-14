@@ -33,7 +33,7 @@ public class WaiterStates : MonoBehaviour
     public bool isGoCustomer;
     public bool isServe;
 
-    public float agentSpeed = 8;
+    public float agentSpeed;
     private enum State
     {
         Idle,
@@ -50,12 +50,14 @@ public class WaiterStates : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currentState = State.Idle;
         instance = this;
-        //agent.acceleration = agentSpeed;
+        
     }
 
 
     void Update()
     {
+        agent.acceleration = agentSpeed;
+        agent.speed = agentSpeed;
         switch (currentState)
         {
             case State.Idle:

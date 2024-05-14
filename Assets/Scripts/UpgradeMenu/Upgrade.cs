@@ -31,7 +31,15 @@ public class Upgrade : MonoBehaviour
     }
     public void WaiterSpeed(float multiply)
     {
-        WaiterStates.instance.agentSpeed += multiply;
+        if (hasMoney)
+        {
+            foreach (GameObject agent in GameObject.FindGameObjectsWithTag("Waiter"))
+            {
+                agent.GetComponent<WaiterStates>().agentSpeed += multiply;
+            }
+            this.gameObject.SetActive(false);
+        }
+
     }
     public void RequiredMoney(int moneyAmount)
     {
