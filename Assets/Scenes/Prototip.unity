@@ -1121,6 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasMoney: 0
   priceText: {fileID: 0}
+  price: 0
 --- !u!1 &432230237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,6 +5984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219148390315401708, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: price
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9219148390315401708, guid: 698ea9e079ec094449d720020d4fdf54,
         type: 3}

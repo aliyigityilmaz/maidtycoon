@@ -8,10 +8,12 @@ public class Upgrade : MonoBehaviour
 {
     public bool hasMoney;
     public TextMeshProUGUI priceText;
+    public int price;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        priceText.text = price.ToString();
     }
 
     // Update is called once per frame
