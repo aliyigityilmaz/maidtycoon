@@ -224,6 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 5823886824483672692}
+  price: 0
 --- !u!1 &2718521835257543072
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 3347755986727823233}
+  price: 0
 --- !u!1 &4002050716445295016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 5277656150949628513}
+  price: 0
 --- !u!1 &7152235825154408083
 GameObject:
   m_ObjectHideFlags: 0

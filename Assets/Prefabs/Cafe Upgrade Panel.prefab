@@ -159,6 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 8790167573810819261}
+  price: 100
 --- !u!1 &1827031523379013307
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 1995147530249158827}
+  price: 200
 --- !u!1 &3663717455923685022
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 1496179275073457730}
+  price: 300
 --- !u!1 &4798871105567482122
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: First Chair Upgrade
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

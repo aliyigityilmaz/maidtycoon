@@ -630,6 +630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &34446698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,6 +2487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 1358567078}
+  price: 0
 --- !u!114 &205018830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,6 +2980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 579444548}
+  price: 0
 --- !u!114 &219687095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6336,6 +6342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!1 &429288608
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,6 +6937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!1 &455735307
 GameObject:
   m_ObjectHideFlags: 0
@@ -12306,6 +12316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &789742755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13217,6 +13229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!1 &832456074
 GameObject:
   m_ObjectHideFlags: 0
@@ -13594,6 +13608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!1001 &864301519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17697,6 +17713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &1186354199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20628,6 +20646,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 488523229}
+  price: 0
 --- !u!114 &1368359751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21601,6 +21621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 832456076}
+  price: 0
 --- !u!114 &1410902769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22126,6 +22148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 2029900782}
+  price: 0
 --- !u!114 &1430649367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22998,6 +23022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &1483377109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24014,6 +24040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &1591700382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26904,6 +26932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &1790731903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30488,6 +30518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoney: 0
+  priceText: {fileID: 0}
+  price: 0
 --- !u!114 &1990339399
 MonoBehaviour:
   m_ObjectHideFlags: 0

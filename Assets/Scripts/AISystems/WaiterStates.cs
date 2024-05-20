@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class WaiterStates : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class WaiterStates : MonoBehaviour
     public bool isServe;
 
     public float agentSpeed;
+
+    [Header("UI")]
+    [SerializeField] private Image progressBar;
+    public float orderTimer;
     private enum State
     {
         Idle,
@@ -225,7 +230,8 @@ public class WaiterStates : MonoBehaviour
     IEnumerator Wait()
     {
         tookOrder = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(orderTimer);
+        UpdateProgressBar(orderTimer * Time.deltaTime);
         assignedCustomer.GetComponent<CustomerStates>().Order();
         assignedCustomer.GetComponent<CustomerStates>().leaveWaiter();
         assignedCustomer = null;
@@ -249,6 +255,7 @@ public class WaiterStates : MonoBehaviour
             else 
             { 
                 currentState = State.Idle;
+                ResetUI();
             }
         }
     }
@@ -269,5 +276,14 @@ public class WaiterStates : MonoBehaviour
             }
         }
         return false;
+    }
+    public void UpdateProgressBar(float fillAmount)
+    {
+        
+        progressBar.fillAmount = fillAmount;
+    }
+    public void ResetUI()
+    {
+        progressBar.fillAmount = 0f;
     }
 }
