@@ -32,15 +32,28 @@ public class OrderSystem : MonoBehaviour
     {
         int randomFood = Random.Range(0, orderList.Length);
         Debug.Log("New Order: " + orderList[randomFood].name);
-        GameObject food = Instantiate(orderList[randomFood], counter.transform.position, Quaternion.identity);
-        activeOrders.Add(food);
+        GameObject food = orderList[randomFood].gameObject;
         food.GetComponent<Food>().id= id;        
+        StartCoroutine(OrderTimer(food.GetComponent<Food>().foodso.foodTimer, food));
+    }
+
+    IEnumerator OrderTimer(float time, GameObject ordered)
+    {
+        yield return new WaitForSeconds(time);
+        OrderCompleted(ordered);
     }
 
     public void OrderCompleted(GameObject ordered)
     {
-        activeOrders.Remove(ordered);
+        activeOrders.Add(ordered);
+        GameObject ready = Instantiate(ordered, counter.transform.position, Quaternion.identity);
         Debug.Log("Order Completed: " + ordered.name);
+
+    }
+
+    public void OrderDelivered(GameObject delivered)
+    {
+        activeOrders.Remove(delivered);
     }
 
     public GameObject AddWaitingList(GameObject customer)

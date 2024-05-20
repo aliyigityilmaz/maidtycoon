@@ -30,10 +30,20 @@ public class EconomyManager : MonoBehaviour
         {
             AddMoney(100);
         }
+
+        if(money <= 0)
+        {
+            //Oyunu kaybettiniz
+        }
     }
 
     public void AddMoney(int amount)
     {
         money += amount;
+    }
+
+    public void Pay(int amount)
+    {
+        money -= amount;
     }
 }

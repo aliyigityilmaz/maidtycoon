@@ -117,7 +117,7 @@ public class WaiterStates : MonoBehaviour
                     {
                         carriedfood.transform.SetParent(carry);
                         carriedfood.transform.position = carry.transform.position;
-                        OrderSystem.instance.OrderCompleted(carriedfood);
+                        OrderSystem.instance.OrderDelivered(carriedfood);
                         hasFood = true;
                         food = carriedfood;
                         currentState = State.Serve;
@@ -201,7 +201,6 @@ public class WaiterStates : MonoBehaviour
             agent.SetDestination(assignedCustomer.transform.position);
             if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
             {
-                Debug.Log("Arrived at customer");
                 agent.SetDestination(this.gameObject.transform.position);
                 tookOrder = false;
                 currentState = State.TakeOrder;               
@@ -223,14 +222,12 @@ public class WaiterStates : MonoBehaviour
 
     IEnumerator Wait()
     {
-        Debug.Log("Taking Order");
         tookOrder = true;
         yield return new WaitForSeconds(1);
         assignedCustomer.GetComponent<CustomerStates>().Order();
         assignedCustomer.GetComponent<CustomerStates>().leaveWaiter();
         assignedCustomer = null;
         currentState = State.Idle;
-        Debug.Log("Berkay mal");
     }
 
     private void Idle()
