@@ -15,6 +15,8 @@ public class OrderSystem : MonoBehaviour
 
     public List<GameObject> activeOrders = new List<GameObject>();
 
+    private int orderIDCounter = 0;
+
     private void Awake()
     {
         instance = this;
@@ -34,7 +36,13 @@ public class OrderSystem : MonoBehaviour
         Debug.Log("New Order: " + orderList[randomFood].name);
         GameObject food = orderList[randomFood].gameObject;
         food.GetComponent<Food>().id= id;        
+        food.GetComponent<Food>().orderID = GetUniqueID();
         StartCoroutine(OrderTimer(food.GetComponent<Food>().foodso.foodTimer, food));
+    }
+
+    private int GetUniqueID()
+    {
+        return orderIDCounter++;
     }
 
     IEnumerator OrderTimer(float time, GameObject ordered)
@@ -46,14 +54,15 @@ public class OrderSystem : MonoBehaviour
     public void OrderCompleted(GameObject ordered)
     {
         activeOrders.Add(ordered);
-        GameObject ready = Instantiate(ordered, counter.transform.position, Quaternion.identity);
-        Debug.Log("Order Completed: " + ordered.name);
-
+        GameObject instantiatedOrder = Instantiate(ordered, counter.transform.position, Quaternion.identity);
+        instantiatedOrder.GetComponent<Food>().orderID = ordered.GetComponent<Food>().orderID;
     }
 
     public void OrderDelivered(GameObject delivered)
     {
-        activeOrders.Remove(delivered);
+        int deliveredID = delivered.GetComponent<Food>().orderID;
+        GameObject order = activeOrders.Find(x => x.GetComponent<Food>().orderID == deliveredID);
+        activeOrders.Remove(order);
     }
 
     public GameObject AddWaitingList(GameObject customer)

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2388452980493211696}
   m_Layer: 0
   m_Name: BlueSoda
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodso: {fileID: 11400000, guid: 7ed5c99a0b3e3824cb8e78b6d5937f8c, type: 2}
-  id: 0
+  id: 1
   value: 0
   time: 0
   taken: 0

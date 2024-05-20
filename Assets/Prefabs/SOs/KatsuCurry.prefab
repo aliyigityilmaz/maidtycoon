@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 4986103615996822349}
   m_Layer: 0
   m_Name: KatsuCurry
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -607,7 +607,7 @@ Transform:
   m_GameObject: {fileID: 7124291890698842832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.123047, y: 4.5858707, z: -1.3960724}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodso: {fileID: 11400000, guid: 4ffb6bbe3ffe76749b139344ea4a25da, type: 2}
-  id: 0
+  id: 1
   value: 0
   time: 0
   taken: 0

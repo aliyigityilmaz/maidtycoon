@@ -117,9 +117,9 @@ public class WaiterStates : MonoBehaviour
                     {
                         carriedfood.transform.SetParent(carry);
                         carriedfood.transform.position = carry.transform.position;
-                        OrderSystem.instance.OrderDelivered(carriedfood);
                         hasFood = true;
                         food = carriedfood;
+                        OrderSystem.instance.OrderDelivered(food.gameObject);
                         currentState = State.Serve;
                     }
                 }
@@ -155,6 +155,8 @@ public class WaiterStates : MonoBehaviour
         if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
         {
             assignedCustomer.GetComponent<CustomerStates>().Eat();
+
+            
             assignedCustomer = null;
             hasFood = false;
             EconomyManager.instance.AddMoney(food.GetComponent<Food>().foodso.foodValue);

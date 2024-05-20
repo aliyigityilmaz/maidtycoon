@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4740467764759339711}
   m_Layer: 0
   m_Name: Omurice
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodso: {fileID: 11400000, guid: 4c94ff2f2fd778b40ae3f2f5d7fcd5c6, type: 2}
-  id: 0
+  id: 3
   value: 0
   time: 0
   taken: 0

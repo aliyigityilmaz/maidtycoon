@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6469738822682326521}
   m_Layer: 0
   m_Name: Ice Coffee
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodso: {fileID: 11400000, guid: 8185b2b42fa4aa44693d878a68ef1c46, type: 2}
-  id: 0
+  id: 1
   value: 0
   time: 0
   taken: 0
