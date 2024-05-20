@@ -1161,6 +1161,9 @@ MonoBehaviour:
   minVerticalAngle: 30
   maxHorizontalAngle: 135
   minHorizontalAngle: -45
+  zoomSpeed: 100
+  maxZoom: 80
+  minZoom: 30
 --- !u!4 &432230239
 Transform:
   m_ObjectHideFlags: 0
