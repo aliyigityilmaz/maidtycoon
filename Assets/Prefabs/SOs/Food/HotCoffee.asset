@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2f759d490fe8464c81b298d6d81bb7c, type: 3}
-  m_Name: Burger
+  m_Name: HotCoffee
   m_EditorClassIdentifier: 
-  foodID: 1
-  foodName: Burger
+  foodID: 2
+  foodName: Hot Coffee
   foodValue: 10
+  foodTimer: 2
