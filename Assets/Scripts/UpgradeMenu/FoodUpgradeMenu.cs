@@ -18,7 +18,7 @@ public class FoodUpgradeMenu : MonoBehaviour
     {
 
     }
-    public void MenuButton()
+    public void MenuPanel()
     {
         if (upgradeMenuOpen)
         {
@@ -31,4 +31,5 @@ public class FoodUpgradeMenu : MonoBehaviour
             upgradeMenuOpen = true;
         }
     }
+
 }

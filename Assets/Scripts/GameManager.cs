@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnFoodAte;
 
+    public GameObject pausePanel;
+    public bool gamePaused = false;
+
     private void Awake()
     {
         instance = this;
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateChairList();
+        pausePanel.SetActive(false);
     }
     // Update is called once per frame
     public void AddToList(GameObject customer)
@@ -73,6 +77,25 @@ public class GameManager : MonoBehaviour
         chairPoints.Add(chair);
     }
 
-
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
+    }
+    public void PauseGame()
+    {
+        if (gamePaused)
+        {
+            pausePanel.SetActive(false);
+            gamePaused = false;
+        }
+        else
+        {
+            pausePanel.SetActive(true);
+            gamePaused = true;
+        }
+    }
 
 }
