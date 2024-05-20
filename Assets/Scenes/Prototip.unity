@@ -1159,6 +1159,8 @@ MonoBehaviour:
   mouseSensitivity: 2
   maxVerticalAngle: 90
   minVerticalAngle: 30
+  maxHorizontalAngle: 135
+  minHorizontalAngle: -45
 --- !u!4 &432230239
 Transform:
   m_ObjectHideFlags: 0
