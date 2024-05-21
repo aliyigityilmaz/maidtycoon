@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105740800729120805}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5968014, y: -0.44302437, z: 0.31150857, w: 0.5920473}
+  m_LocalRotation: {x: 0.5968002, y: -0.44302693, z: 0.31151035, w: 0.5920456}
   m_LocalPosition: {x: 0, y: 0.45, z: 0}
-  m_LocalScale: {x: 115.10246, y: 115.10246, z: 115.10246}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 37.1, y: 37.1, z: 37.1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 79.321, y: -124.473, z: -59.668}
 --- !u!33 &1843801916901600172
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodso: {fileID: 11400000, guid: 8185b2b42fa4aa44693d878a68ef1c46, type: 2}
   id: 1
+  orderID: 0
   value: 0
   time: 0
   taken: 0
