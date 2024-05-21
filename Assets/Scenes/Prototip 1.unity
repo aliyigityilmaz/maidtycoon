@@ -6556,6 +6556,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3667248986693200893, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501666}
+    - target: {fileID: 3667248986693200893, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WaiterUpgradeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239414516655237095, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501666}
+    - target: {fileID: 4239414516655237095, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FoodUpgradeMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4674184845279788089, guid: 9943c1eef9c473c40a3b3b54862b606f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6575,6 +6595,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501666}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CafeUpgradeMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7452621751972808817, guid: 9943c1eef9c473c40a3b3b54862b606f,
         type: 3}
@@ -10889,6 +10919,8 @@ MonoBehaviour:
   isGoCustomer: 0
   isServe: 0
   agentSpeed: 3.5
+  progressBar: {fileID: 0}
+  orderTimer: 0
 --- !u!1 &734488635
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +11473,8 @@ MonoBehaviour:
   isGoCustomer: 0
   isServe: 0
   agentSpeed: 3.5
+  progressBar: {fileID: 0}
+  orderTimer: 0
 --- !u!195 &746785508
 NavMeshAgent:
   m_ObjectHideFlags: 0

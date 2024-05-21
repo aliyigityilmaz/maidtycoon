@@ -32,7 +32,7 @@ public class EconomyManager : MonoBehaviour
             AddMoney(100);
         }
 
-        if(money <= 0)
+        if(money < 0)
         {
             SceneManager.LoadScene("Lose Screen");
         }
