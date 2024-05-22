@@ -1,0 +1,5 @@
+
+
+To use particles from this pack you need to select them from [Assets\Magic Fire Spells VFX\Particles] and just drop it in scene view.
+All parametrs are pre-configured.
+Suggestion before changing some parts of the particles - be familiar with unity PS system and SFX.

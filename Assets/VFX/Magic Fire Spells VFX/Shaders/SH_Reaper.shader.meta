@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a9c477a6bfcbd744fbe5e393da5be051
+timeCreated: 1519994794
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Mask: {fileID: 2800000, guid: 803f695b6e8d359429eac08bc8148958, type: 3}
+  - _TileableFire: {fileID: 2800000, guid: 803f695b6e8d359429eac08bc8148958, type: 3}
+  - _Texture_Main: {fileID: 2800000, guid: 525d0718924e1c64bbf761dd06553d7b, type: 3}
+  - _Texture_03: {fileID: 2800000, guid: c7572165342acd54cb7a26aa313146f2, type: 3}
+  - _Texture_02: {fileID: 2800000, guid: 22d3bf82fc2abc84585d2d570fc84b1f, type: 3}
+  - _Texture_01: {fileID: 2800000, guid: 3b583d8b056a89945ba9e0cdbdcee87e, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
