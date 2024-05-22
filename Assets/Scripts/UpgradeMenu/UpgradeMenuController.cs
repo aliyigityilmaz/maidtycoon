@@ -7,14 +7,17 @@ public class UpgradeMenuController : MonoBehaviour
     public GameObject foodUpgradeMenuPanel;
     public GameObject cafeUpgradeMenu;
     public GameObject waiterUpgradeMenu;
+    public GameObject checkListMenu;
    // public bool upgradeMenuOpen = false;
     public bool foodUpgradeMenuOpen = false;
     public bool cafeUpgradeMenuOpen = false;
     public bool waiterUpgradeMenuOpen = false;
+    public bool checkListMenuOpen = false;
 
     public Animator foodAnimator;
     public Animator cafeAnimator;
     public Animator waiterAnimator;
+    public Animator checkListAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +43,11 @@ public class UpgradeMenuController : MonoBehaviour
             foodUpgradeMenuPanel.SetActive(true);
             cafeUpgradeMenu.SetActive(false);
             waiterUpgradeMenu.SetActive(false);
+            checkListMenu.SetActive(false);
             foodUpgradeMenuOpen = true;
             waiterUpgradeMenuOpen = false;
             cafeUpgradeMenuOpen = false;
+            checkListMenuOpen = false;
         }
     }
     public void CafeUpgradeMenu()
@@ -58,9 +63,11 @@ public class UpgradeMenuController : MonoBehaviour
             cafeUpgradeMenu.SetActive(true);
             foodUpgradeMenuPanel.SetActive(false);
             waiterUpgradeMenu.SetActive(false);
+            checkListMenu.SetActive(false);
             cafeUpgradeMenuOpen = true;
             waiterUpgradeMenuOpen = false;
             foodUpgradeMenuOpen = false;
+            checkListMenuOpen = false;
         }
     }
     public void WaiterUpgradeMenu()
@@ -76,8 +83,30 @@ public class UpgradeMenuController : MonoBehaviour
             waiterUpgradeMenu.SetActive(true);
             foodUpgradeMenuPanel.SetActive(false);
             cafeUpgradeMenu.SetActive(false);
+            checkListMenu.SetActive(false);
             waiterUpgradeMenuOpen = true;
             cafeUpgradeMenuOpen = false;
+            foodUpgradeMenuOpen = false;
+            checkListMenuOpen = false;
+        }
+    }
+    public void CheckListMenu()
+    {
+        if (checkListMenuOpen)
+        {
+            StartCoroutine(ClosePanel(checkListMenu, 0.25f));
+            checkListMenuOpen = false;
+            checkListAnimator.SetTrigger("Close Panel");
+        }
+        else
+        {
+            checkListMenu.SetActive(true);
+            foodUpgradeMenuPanel.SetActive(false);
+            cafeUpgradeMenu.SetActive(false);
+            waiterUpgradeMenu.SetActive(false);
+            checkListMenuOpen = true;
+            cafeUpgradeMenuOpen = false;
+            waiterUpgradeMenuOpen = false;
             foodUpgradeMenuOpen = false;
         }
     }

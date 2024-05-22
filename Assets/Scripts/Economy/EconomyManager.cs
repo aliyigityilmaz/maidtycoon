@@ -34,7 +34,7 @@ public class EconomyManager : MonoBehaviour
 
         if(money < 0)
         {
-            SceneManager.LoadScene("Lose Screen");
+            Invoke("LoseScreen", 3f);
         }
     }
 
@@ -46,5 +46,9 @@ public class EconomyManager : MonoBehaviour
     public void Pay(int amount)
     {
         money -= amount;
+    }
+    public void LoseScreen()
+    {
+        SceneManager.LoadScene("Lose Screen");
     }
 }

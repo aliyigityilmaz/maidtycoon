@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
+    [SerializeField] private CheckList checkList;
+
     public bool hasMoney;
     public TextMeshProUGUI priceText;
     public int price;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +24,7 @@ public class Upgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void ChairUpgrade(GameObject chair)
     {
@@ -29,6 +34,7 @@ public class Upgrade : MonoBehaviour
             CustomerManager.instance.IncreaseMaxCustomer(2);
             GameManager.instance.UpdateChairList();
             this.gameObject.SetActive(false);
+            checkList.cafeUpgrades++;
             hasMoney = false;
         }
     }
@@ -41,6 +47,7 @@ public class Upgrade : MonoBehaviour
                 agent.GetComponent<WaiterStates>().agentSpeed += multiply;
             }
             this.gameObject.SetActive(false);
+            checkList.waiterUpgrades++;
         }
 
     }
@@ -54,6 +61,7 @@ public class Upgrade : MonoBehaviour
     }
     public void FoodPrices(int multiply)
     {
-
+        checkList.foodUpgrades++;
     }
+
 }

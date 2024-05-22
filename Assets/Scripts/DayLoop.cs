@@ -28,7 +28,7 @@ public class DayLoop : MonoBehaviour
     {
         economyManager = EconomyManager.instance;
         day = 1;
-        dayText.text = "Day " + day;
+        dayText.text = day.ToString();
     }
 
     void Update()
@@ -39,7 +39,7 @@ public class DayLoop : MonoBehaviour
         {
             EndDay();
             day++;
-            dayText.text = "Day " + day;
+            dayText.text = day.ToString();
             currentTime = 0f;
             StartDay();
         }
