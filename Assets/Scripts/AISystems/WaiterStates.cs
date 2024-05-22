@@ -38,7 +38,9 @@ public class WaiterStates : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Image progressBar;
-    public float orderTimer;
+    public float fillDuration = 2f;
+    private float elapsedTime;
+    public Camera camera;
     private enum State
     {
         Idle,
@@ -63,6 +65,7 @@ public class WaiterStates : MonoBehaviour
     {
         agent.acceleration = agentSpeed;
         agent.speed = agentSpeed;
+        progressBar.transform.LookAt(transform.position + camera.transform.rotation * Vector3.forward, camera.transform.rotation * Vector3.up);
         switch (currentState)
         {
             case State.Idle:
@@ -230,8 +233,14 @@ public class WaiterStates : MonoBehaviour
     IEnumerator Wait()
     {
         tookOrder = true;
-        yield return new WaitForSeconds(orderTimer);
-        UpdateProgressBar(orderTimer * Time.deltaTime);
+        yield return new WaitForSeconds(2);
+        while (elapsedTime < fillDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            progressBar.fillAmount = Mathf.Clamp01(elapsedTime / fillDuration);
+            yield return null;
+        }
+        progressBar.fillAmount = 1f;
         assignedCustomer.GetComponent<CustomerStates>().Order();
         assignedCustomer.GetComponent<CustomerStates>().leaveWaiter();
         assignedCustomer = null;
@@ -251,6 +260,7 @@ public class WaiterStates : MonoBehaviour
             else if (OrderSystem.instance.activeOrders.Count > 0)
             { 
                 currentState = State.TakeFood;
+                ResetUI();
             }
             else 
             { 

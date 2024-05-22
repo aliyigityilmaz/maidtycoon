@@ -2248,7 +2248,8 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 1998439800}
-  orderTimer: 2
+  fillDuration: 2
+  camera: {fileID: 1678336799}
 --- !u!1 &746785506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,7 +2296,8 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 35022547}
-  orderTimer: 2
+  fillDuration: 2
+  camera: {fileID: 1678336799}
 --- !u!195 &746785508
 NavMeshAgent:
   m_ObjectHideFlags: 0
