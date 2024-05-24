@@ -15,54 +15,51 @@ public class OrderSystem : MonoBehaviour
 
     public List<GameObject> activeOrders = new List<GameObject>();
 
-    private int orderIDCounter = 0;
+    private int currentOrderId = 0; // Benzersiz ID oluþturmak için sayaç
 
     private void Awake()
     {
         instance = this;
     }
 
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-        
-    }
     public void NewOrder(int id)
     {
         int randomFood = Random.Range(0, orderList.Length);
         Debug.Log("New Order: " + orderList[randomFood].name);
-        GameObject food = orderList[randomFood].gameObject;
-        food.GetComponent<Food>().id= id;        
-        food.GetComponent<Food>().orderID = GetUniqueID();
-        StartCoroutine(OrderTimer(food.GetComponent<Food>().foodso.foodTimer, food));
-    }
 
-    private int GetUniqueID()
-    {
-        return orderIDCounter++;
-    }
+        // Yeni bir yemek oluþtur
+        GameObject food = Instantiate(orderList[randomFood], counter.transform.position, Quaternion.identity);
 
-    IEnumerator OrderTimer(float time, GameObject ordered)
-    {
-        yield return new WaitForSeconds(time);
-        OrderCompleted(ordered);
+        // Yemeðe benzersiz bir ID ata
+        food.GetComponent<Food>().id = id;
+        food.GetComponent<Food>().id = currentOrderId++;
+
+        // Yemek objesini activeOrders listesine ekle
+        activeOrders.Add(food);
     }
 
     public void OrderCompleted(GameObject ordered)
     {
-        activeOrders.Add(ordered);
-        GameObject instantiatedOrder = Instantiate(ordered, counter.transform.position, Quaternion.identity);
-        instantiatedOrder.GetComponent<Food>().orderID = ordered.GetComponent<Food>().orderID;
-    }
+        GameObject orderToRemove = null;
 
-    public void OrderDelivered(GameObject delivered)
-    {
-        int deliveredID = delivered.GetComponent<Food>().orderID;
-        GameObject order = activeOrders.Find(x => x.GetComponent<Food>().orderID == deliveredID);
-        activeOrders.Remove(order);
+        foreach (GameObject order in activeOrders)
+        {
+            if (order.GetComponent<Food>().id == ordered.GetComponent<Food>().id)
+            {
+                orderToRemove = order;
+                break;
+            }
+        }
+
+        if (orderToRemove != null)
+        {
+            activeOrders.Remove(orderToRemove);
+            Debug.Log("Order completed and removed: " + ordered.GetComponent<Food>().name);
+        }
+        else
+        {
+            Debug.Log("Order not found in active orders.");
+        }
     }
 
     public GameObject AddWaitingList(GameObject customer)
@@ -77,6 +74,6 @@ public class OrderSystem : MonoBehaviour
         waitingToOrder.Remove(customer);
     }
 
-    
+
 
 }

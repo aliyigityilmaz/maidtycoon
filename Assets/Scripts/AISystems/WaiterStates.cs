@@ -127,7 +127,7 @@ public class WaiterStates : MonoBehaviour
                         carriedfood.transform.position = carry.transform.position;
                         hasFood = true;
                         food = carriedfood;
-                        OrderSystem.instance.OrderDelivered(food.gameObject);
+                        OrderSystem.instance.OrderCompleted(food.gameObject);
                         currentState = State.Serve;
                     }
                 }

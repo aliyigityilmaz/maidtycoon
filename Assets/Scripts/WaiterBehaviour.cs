@@ -80,7 +80,7 @@ public class WaiterBehaviour : MonoBehaviour
     {
         if (Vector3.Distance(this.transform.position, customerLocation.transform.position) < 2f)
         {
-            OrderSystem.instance.OrderCompleted(foodPrefab);
+            
             foodPrefab.transform.SetParent(null);
             customerLocation.GetComponent<CustomerBehaviour>().ServeOrder();
             Destroy(foodPrefab);
