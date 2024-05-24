@@ -20,10 +20,8 @@ public class WaiterStates : MonoBehaviour
     private GameObject food;
 
     [Header("ServeCustomer")]
-    [SerializeField]
-    private GameObject assignedCustomer;
-    [SerializeField]
-    private bool foundaCustomer;
+    public GameObject assignedCustomer;
+    public bool foundaCustomer;
     [SerializeField]
     private bool tookOrder;
 
@@ -128,6 +126,7 @@ public class WaiterStates : MonoBehaviour
                         hasFood = true;
                         food = carriedfood;
                         OrderSystem.instance.OrderCompleted(food.gameObject);
+                        DayLoop.instance.AddSold();
                         currentState = State.Serve;
                     }
                 }
@@ -295,5 +294,10 @@ public class WaiterStates : MonoBehaviour
     public void ResetUI()
     {
         progressBar.fillAmount = 0f;
+    }
+
+    public void SetStateIdle()
+    {
+        currentState = State.Idle;
     }
 }

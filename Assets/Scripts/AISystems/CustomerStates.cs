@@ -30,6 +30,12 @@ public class CustomerStates : MonoBehaviour
 
     private bool left;
     GameObject closestTable = null;
+
+    [Header("Waiting For Food")]
+    public GameObject[] vfxs;
+    public float waitingTimer;
+    private float timer = 0;
+
     private enum State
     {
         Searching,
@@ -48,6 +54,7 @@ public class CustomerStates : MonoBehaviour
     }
     void Start()
     {
+        timer = waitingTimer;
         left = true;
         agent = GetComponent<NavMeshAgent>();
         ReadyToOrder = false;
@@ -81,7 +88,18 @@ public class CustomerStates : MonoBehaviour
                 Leaving();
                 break;
         }
-        
+        if (currentState == State.WaitingOrder)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                currentState = State.Leaving;
+            }
+        }
+        else
+        {
+            timer = waitingTimer;
+        }
     }
     private void Searching()
     {
@@ -177,6 +195,20 @@ public class CustomerStates : MonoBehaviour
             GameManager.instance.RemoveChair(randomChair);
             left = false;
         }
+        foreach (GameObject waiter in GameObject.FindGameObjectsWithTag("Waiter"))
+        {
+            if(waiter.GetComponent<WaiterStates>().assignedCustomer == this.gameObject)
+            {
+                waiter.GetComponent<WaiterStates>().assignedCustomer = null;
+                waiter.GetComponent<WaiterStates>().foundaCustomer = false;
+                waiter.GetComponent<WaiterStates>().SetStateIdle();
+            }
+            else
+            {
+                Debug.Log("No waiter found");
+            }
+        }
+
         agent.SetDestination(exitDoor.transform.position);
         
         if (Vector3.Distance(this.transform.position, exitDoor.transform.position) < 1)

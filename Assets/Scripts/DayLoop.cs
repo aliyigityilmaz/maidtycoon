@@ -13,11 +13,18 @@ public class DayLoop : MonoBehaviour
 
     public float dailyRent = 100f;
     public float dailyWages = 50f;
+    
 
     public int day = 1;
 
     public Image timerImage;
     public Text dayText;
+
+
+    [SerializeField]
+    private int howManySold;
+    [SerializeField]
+    private float soldAmount;
 
     private void Awake()
     {
@@ -47,7 +54,7 @@ public class DayLoop : MonoBehaviour
 
     public void StartDay()
     {
-
+        howManySold = 0;
     }
 
     public void EndDay()
@@ -56,7 +63,16 @@ public class DayLoop : MonoBehaviour
         {
             dailyWages += 50f;
         }
-        int totalCost = (int)(dailyRent + dailyWages);
+        for (int i = 0; i < howManySold; i++)
+        {
+            soldAmount += 2.5f;
+        }
+        int totalCost = (int)(dailyRent + dailyWages + soldAmount);
         economyManager.Pay(totalCost);
+    }
+
+    public void AddSold()
+    {
+        howManySold++;
     }
 }
