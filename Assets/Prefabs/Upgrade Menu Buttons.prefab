@@ -462,7 +462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 90e0c0ccf88c11f40ae5a0f2666f73e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5c2ccf324c21224eb5a71ef864d1d63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -518,7 +518,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeMenuController, Assembly-CSharp
-        m_MethodName: WaiterUpgradeMenu
+        m_MethodName: CheckListMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

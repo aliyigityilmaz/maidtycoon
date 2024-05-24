@@ -12,6 +12,8 @@ public class EconomyManager : MonoBehaviour
 
     public TextMeshProUGUI moneyCountText;
 
+    public GameObject bustPanel;
+
 
     private void Awake()
     {
@@ -34,7 +36,7 @@ public class EconomyManager : MonoBehaviour
 
         if(money < 0)
         {
-            Invoke("LoseScreen", 3f);
+            LoseScreen();
         }
     }
 
@@ -49,6 +51,7 @@ public class EconomyManager : MonoBehaviour
     }
     public void LoseScreen()
     {
-        SceneManager.LoadScene("Lose Screen");
+        bustPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 }

@@ -8,11 +8,15 @@ using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
-    [SerializeField] private CheckList checkList;
+    //[SerializeField] private CheckList checkList;
 
     public bool hasMoney;
     public TextMeshProUGUI priceText;
     public int price;
+
+    public Image upgradeButton;
+    public Sprite greenSprite;
+    public Sprite graySprite;
 
 
     // Start is called before the first frame update
@@ -24,7 +28,14 @@ public class Upgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (EconomyManager.instance.money >= price)
+        {
+            upgradeButton.sprite = greenSprite;
+        }
+        else
+        {
+            upgradeButton.sprite = graySprite;
+        }
     }
     public void ChairUpgrade(GameObject chair)
     {
@@ -34,7 +45,7 @@ public class Upgrade : MonoBehaviour
             CustomerManager.instance.IncreaseMaxCustomer(2);
             GameManager.instance.UpdateChairList();
             this.gameObject.SetActive(false);
-            checkList.cafeUpgrades++;
+            CheckList.instance.cafeUpgrades++;
             hasMoney = false;
         }
     }
@@ -47,7 +58,7 @@ public class Upgrade : MonoBehaviour
                 agent.GetComponent<WaiterStates>().agentSpeed += multiply;
             }
             this.gameObject.SetActive(false);
-            checkList.waiterUpgrades++;
+            CheckList.instance.waiterUpgrades++;
         }
 
     }
@@ -61,7 +72,7 @@ public class Upgrade : MonoBehaviour
     }
     public void FoodPrices(int multiply)
     {
-        checkList.foodUpgrades++;
+        CheckList.instance.foodUpgrades++;
     }
 
 }

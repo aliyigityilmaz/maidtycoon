@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CheckList : MonoBehaviour
 {
+    public static CheckList instance;
 
     public int cafeUpgrades = 0;
     public int cafeUpgradesThisLevel;
@@ -41,7 +42,7 @@ public class CheckList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -108,6 +109,7 @@ public class CheckList : MonoBehaviour
     }
     public void NextLevelButton()
     {
-        SceneManager.LoadScene("Prototip 1");
+        int sceneNumber = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneNumber + 1);
     }
 }
