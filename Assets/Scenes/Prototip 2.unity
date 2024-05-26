@@ -21859,8 +21859,6 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 0}
-  fillDuration: 2
-  camera: {fileID: 0}
 --- !u!1 &734488635
 GameObject:
   m_ObjectHideFlags: 0
@@ -22156,8 +22154,6 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 0}
-  fillDuration: 2
-  camera: {fileID: 0}
 --- !u!195 &746785508
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -63908,6 +63904,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2044288180}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044288182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5376826848353764706, guid: 44a15536a7a049d4286cf31294da19f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2044288180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2045660293
 GameObject:
   m_ObjectHideFlags: 0
@@ -65205,7 +65207,7 @@ MonoBehaviour:
   OnFoodAte:
     m_PersistentCalls:
       m_Calls: []
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 2044288182}
   gamePaused: 0
 --- !u!4 &2082501665
 Transform:
@@ -65312,12 +65314,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cafeUpgrades: 0
-  cafeUpgradesThisLevel: 0
+  cafeUpgradesThisLevel: 10
   foodUpgrades: 0
   foodUpgradesThisLevel: 0
   waiterUpgrades: 0
-  waiterUpgradesThisLevel: 0
-  soldFoodCount: 0
+  waiterUpgradesThisLevel: 5
+  soldFoodCount: 100
   requiredFoodCount: 0
   allCafeUpgrades: 0
   allWaiterUpgrades: 0

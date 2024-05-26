@@ -10503,8 +10503,6 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 0}
-  fillDuration: 2
-  camera: {fileID: 0}
 --- !u!1 &734488635
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,8 +10922,6 @@ MonoBehaviour:
   isServe: 0
   agentSpeed: 3.5
   progressBar: {fileID: 0}
-  fillDuration: 2
-  camera: {fileID: 0}
 --- !u!195 &746785508
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31007,13 +31003,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cafeUpgrades: 0
-  cafeUpgradesThisLevel: 0
+  cafeUpgradesThisLevel: 7
   foodUpgrades: 0
   foodUpgradesThisLevel: 0
   waiterUpgrades: 0
-  waiterUpgradesThisLevel: 0
+  waiterUpgradesThisLevel: 4
   soldFoodCount: 0
-  requiredFoodCount: 0
+  requiredFoodCount: 50
   allCafeUpgrades: 0
   allWaiterUpgrades: 0
   allFoodUpgrades: 0
