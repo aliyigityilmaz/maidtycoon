@@ -88,7 +88,7 @@ public class CheckList : MonoBehaviour
 
         if (foodCountText != null && foodCountText.gameObject.activeSelf == true)
         {
-            foodCountText.text = soldFoodCount + " / " + requiredFoodCount;
+            foodCountText.text = "Serve food: " + soldFoodCount + " / " + requiredFoodCount;
         }
     }
     public void AllCafeUpgrades()

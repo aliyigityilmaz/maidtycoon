@@ -10,6 +10,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private bool creditsActive;
 
     public GameObject fadeScreen;
+    private void Awake()
+    {
+        Time.timeScale = 1.0f;
+    }
     private void Start()
     {
         creditsMenu.SetActive(false);

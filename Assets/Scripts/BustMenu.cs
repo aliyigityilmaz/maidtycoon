@@ -19,7 +19,8 @@ public class BustMenu : MonoBehaviour
     }
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1.0f;
     }
     public void RestartScene()
     {

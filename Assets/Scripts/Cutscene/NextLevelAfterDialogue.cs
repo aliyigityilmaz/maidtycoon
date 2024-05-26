@@ -18,6 +18,6 @@ public class NextLevelAfterDialogue : MonoBehaviour
     }
     public void GoToNextLevelAfterDialogue()
     {
-        SceneManager.LoadScene("Prototip");
+        SceneManager.LoadScene(2);
     }
 }
