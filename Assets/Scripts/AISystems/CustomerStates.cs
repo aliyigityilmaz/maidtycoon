@@ -9,6 +9,7 @@ public class CustomerStates : MonoBehaviour
 {
     public static CustomerStates instance;
     NavMeshAgent agent;
+    private Animator anim;
 
     private GameObject randomChair;
 
@@ -54,6 +55,7 @@ public class CustomerStates : MonoBehaviour
     }
     void Start()
     {
+        anim = GetComponent<Animator>();
         timer = waitingTimer;
         left = true;
         agent = GetComponent<NavMeshAgent>();
@@ -100,6 +102,11 @@ public class CustomerStates : MonoBehaviour
         {
             timer = waitingTimer;
         }
+
+        if(anim.GetBool("isSitting") == true)
+        {
+            transform.position = randomChair.transform.position;
+        }
     }
     private void Searching()
     {
@@ -109,6 +116,8 @@ public class CustomerStates : MonoBehaviour
 
     private void GoingToChair()
     {
+        anim.SetBool("isWalking", true);
+        anim.SetBool("isSitting", false);
         agent.SetDestination(randomChair.transform.position);
         if (Vector3.Distance(this.transform.position, randomChair.transform.position) < 1)
         {
@@ -120,6 +129,8 @@ public class CustomerStates : MonoBehaviour
     private void WaitingOrder()
     {
         FindClosestTable();
+        anim.SetBool("isWalking", false);
+        anim.SetBool("isSitting", true);
         Vector3 direction = closestTable.transform.position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
@@ -189,7 +200,9 @@ public class CustomerStates : MonoBehaviour
 
     private void Leaving()
     {
-        
+        anim.SetBool("isWalking", true);
+        anim.SetBool("isSitting", false);
+
         if (left)
         {
             GameManager.instance.RemoveChair(randomChair);
