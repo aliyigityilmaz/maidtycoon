@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +18,15 @@ public class OrderSystem : MonoBehaviour
 
     private int currentOrderId = 0; // Benzersiz ID oluþturmak için sayaç
 
+    [Header("Bools")]
+    public bool firstUpgrade;
+    public float firstUpgradeMultiplier;
+    public bool secondUpgrade;
+    public float secondUpgradeMultiplier;
+    public bool thirdUpgrade;
+    public float thirdUpgradeMultiplier;
+
+
     private void Awake()
     {
         instance = this;
@@ -29,6 +39,19 @@ public class OrderSystem : MonoBehaviour
 
         // Yeni bir yemek oluþtur
         GameObject food = Instantiate(orderList[randomFood], counter.transform.position, Quaternion.identity);
+
+        //
+
+        food.GetComponent<Food>().value = Mathf.RoundToInt(food.GetComponent<Food>().value * 
+            (thirdUpgrade ? thirdUpgradeMultiplier : 
+            secondUpgrade ? secondUpgradeMultiplier : 
+            firstUpgrade ? firstUpgradeMultiplier : 1));
+
+
+
+        //
+
+
 
         // Yemeðe benzersiz bir ID ata
         food.GetComponent<Food>().id = id;
