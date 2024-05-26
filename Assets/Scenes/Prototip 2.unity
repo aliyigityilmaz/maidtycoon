@@ -20795,6 +20795,48 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 684892750}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &684892752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6358105964735559479, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 684892750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &684892753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3577429279008751657, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 684892750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &684892754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1269882282318393094, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 684892750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &684892755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 219975186258594014, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 684892750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692553634
 GameObject:
   m_ObjectHideFlags: 0
@@ -66565,6 +66607,7 @@ MonoBehaviour:
       m_Calls: []
   pausePanel: {fileID: 2044288182}
   gamePaused: 0
+  isGameStarted: 0
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0
@@ -66619,6 +66662,7 @@ MonoBehaviour:
   money: 100
   moneyCountText: {fileID: 1248475865}
   bustPanel: {fileID: 1631648195}
+  isBust: 0
 --- !u!114 &2082501670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66639,6 +66683,10 @@ MonoBehaviour:
   dayText: {fileID: 1870537109}
   howManySold: 0
   soldAmount: 0
+  rentText: {fileID: 684892754}
+  soldAmountText: {fileID: 684892755}
+  wageText: {fileID: 684892752}
+  endOfTheDayPanel: {fileID: 684892753}
 --- !u!114 &2082501671
 MonoBehaviour:
   m_ObjectHideFlags: 0

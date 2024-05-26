@@ -4906,6 +4906,48 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 359239934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &359239936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6358105964735559479, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 359239934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &359239937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1269882282318393094, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 359239934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &359239938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 219975186258594014, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 359239934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &359239939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3577429279008751657, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 359239934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360451543
 GameObject:
   m_ObjectHideFlags: 0
@@ -31729,6 +31771,7 @@ MonoBehaviour:
       m_Calls: []
   pausePanel: {fileID: 2060374520}
   gamePaused: 0
+  isGameStarted: 0
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0
@@ -31783,6 +31826,7 @@ MonoBehaviour:
   money: 100
   moneyCountText: {fileID: 1248475865}
   bustPanel: {fileID: 906503103}
+  isBust: 0
 --- !u!114 &2082501670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31803,6 +31847,10 @@ MonoBehaviour:
   dayText: {fileID: 1836260414}
   howManySold: 0
   soldAmount: 0
+  rentText: {fileID: 359239937}
+  soldAmountText: {fileID: 359239938}
+  wageText: {fileID: 359239936}
+  endOfTheDayPanel: {fileID: 359239939}
 --- !u!114 &2082501671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31818,7 +31866,7 @@ MonoBehaviour:
   cafeUpgrades: 0
   cafeUpgradesThisLevel: 7
   foodUpgrades: 0
-  foodUpgradesThisLevel: 0
+  foodUpgradesThisLevel: 4
   waiterUpgrades: 0
   waiterUpgradesThisLevel: 4
   soldFoodCount: 0

@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene.unity
     guid: ba83abd233bf0ba468023b8d9dab44fa
   - enabled: 1
-    path: Assets/Scenes/Prototip.unity
-    guid: 85d4646756010f44d9514bb70c60b19b
+    path: Assets/Scenes/Level1.unity
+    guid: 2814f384207060b4aba2e89b25ec871c
   - enabled: 1
-    path: Assets/Scenes/Prototip 1.unity
-    guid: 4f589a0900e4e3e48a26fc4d1f7c5989
+    path: Assets/Scenes/Level 2.unity
+    guid: a7acde4c9f19a66418dfb50c0a228171
   - enabled: 1
     path: Assets/Scenes/Prototip 2.unity
     guid: 8c772c0ee8af6d148adc70d6bc0f79ad
