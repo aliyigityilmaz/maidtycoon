@@ -153,6 +153,8 @@ MonoBehaviour:
   finishedEating: 0
   _Leaving: 0
   customerID: 0
+  vfxs: []
+  waitingTimer: 20
 --- !u!1001 &8046974253352832148
 PrefabInstance:
   m_ObjectHideFlags: 0

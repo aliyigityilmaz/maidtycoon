@@ -42,13 +42,9 @@ public class CheckList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream
-        instance = this;
-=======
 
         instance = this;
         soldFoodCount = 0;
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -86,6 +82,11 @@ public class CheckList : MonoBehaviour
         if (soldFoodCount >= requiredFoodCount)
         {
             SoldFoodCount();
+        }
+
+        if (foodCountText != null && foodCountText.gameObject.activeSelf == true)
+        {
+            foodCountText.text = soldFoodCount + " / " + requiredFoodCount;
         }
     }
     public void AllCafeUpgrades()

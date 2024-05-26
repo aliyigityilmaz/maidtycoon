@@ -36,7 +36,7 @@ public class WaiterStates : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Image progressBar;
-    public float fillDuration = 2f;
+    private float fillDuration = 2f;
     private float elapsedTime;
     public Camera camera;
     private enum State
@@ -232,7 +232,7 @@ public class WaiterStates : MonoBehaviour
     IEnumerator Wait()
     {
         tookOrder = true;
-        yield return new WaitForSeconds(2);
+        
         while (elapsedTime < fillDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -248,6 +248,8 @@ public class WaiterStates : MonoBehaviour
 
     private void Idle()
     {
+        progressBar.fillAmount = 0f;
+        elapsedTime = 0;
         foundaCustomer = false;
         agent.SetDestination(this.transform.position);
         if (agent != null)
