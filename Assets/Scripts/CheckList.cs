@@ -40,8 +40,7 @@ public class CheckList : MonoBehaviour
     public int waiterCount;
     public int foodCount;
 
-
-    public GameObject lastBlackScreen;
+    public GameObject blackscreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -119,7 +118,6 @@ public class CheckList : MonoBehaviour
     }
     public void NextLevelButton()
     {
-        int sceneNumber = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneNumber + 1);
+        blackscreen.SetActive(true);
     }
 }

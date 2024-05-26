@@ -18,6 +18,7 @@ public class MenuBlackScreen : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        int sceneNumber = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneNumber + 1);
     }
 }

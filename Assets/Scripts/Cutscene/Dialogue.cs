@@ -64,7 +64,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             blackScreen.SetActive(true);
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
