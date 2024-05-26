@@ -38,7 +38,10 @@ public class WaiterStates : MonoBehaviour
     [SerializeField] private Image progressBar;
     private float fillDuration = 2f;
     private float elapsedTime;
-    public Camera camera;
+    private Camera camera;
+
+
+    private Animator Animator;
     private enum State
     {
         Idle,
@@ -55,7 +58,10 @@ public class WaiterStates : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currentState = State.Idle;
         instance = this;
-        
+        Animator = GetComponent<Animator>();
+        camera = Camera.main;
+        counter = GameObject.FindGameObjectWithTag("FoodCounter");
+        carry = transform.GetChild(0);
     }
 
 
@@ -113,21 +119,27 @@ public class WaiterStates : MonoBehaviour
     {
         if (counter != null)
         {
+            Animator.SetBool("isWalking", true);
+            Animator.SetBool("isCarrying", false);
             agent.SetDestination(counter.transform.position);
-            if (Vector3.Distance(this.transform.position, counter.transform.position) < 0.5f && hasFood == false)
+            if (Vector3.Distance(this.transform.position, counter.transform.position) < 1f && hasFood == false)
             {
-                 GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
+                GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
                 foreach (GameObject carriedfood in foods)
                 {
-                    if (carriedfood.GetComponent<Food>().taken == false)
+                    if (carriedfood.GetComponent<Food>().taken == false && carriedfood != null)
                     {
+                        carriedfood.GetComponent<Food>().taken = true; // Alýnan yemeði hemen iþaretle
                         carriedfood.transform.SetParent(carry);
                         carriedfood.transform.position = carry.transform.position;
                         hasFood = true;
                         food = carriedfood;
                         OrderSystem.instance.OrderCompleted(food.gameObject);
                         DayLoop.instance.AddSold();
+                        Animator.SetBool("isCarrying", true);
+                        Animator.SetBool("isWalking", false);
                         currentState = State.Serve;
+                        break;
                     }
                 }
             }
@@ -145,7 +157,7 @@ public class WaiterStates : MonoBehaviour
             currentState = State.Idle;
             return;
         }
-        food.GetComponent<Food>().taken = true;
+        
         int id = food.GetComponent<Food>().id;
         foreach (GameObject customer in GameManager.instance.seatedCustomer)
         {
@@ -162,7 +174,8 @@ public class WaiterStates : MonoBehaviour
         if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
         {
             assignedCustomer.GetComponent<CustomerStates>().Eat();
-
+            Animator.SetBool("isCarrying", false);
+            Animator.SetBool("isWalking", true);
             CheckList.instance.soldFoodCount++;
             assignedCustomer = null;
             hasFood = false;
@@ -186,6 +199,8 @@ public class WaiterStates : MonoBehaviour
                     {
                         if (customer.GetComponent<CustomerStates>().waiterAttended == false)
                         {
+                            Animator.SetBool("isCarrying", false);
+                            Animator.SetBool("isWalking", true);
                             assignedCustomer = customer;
                             foundaCustomer = true;
                             assignedCustomer.GetComponent<CustomerStates>().attendWaiter(this.gameObject);
@@ -208,6 +223,7 @@ public class WaiterStates : MonoBehaviour
         if (foundaCustomer)
         {
             agent.SetDestination(assignedCustomer.transform.position);
+            
             if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
             {
                 agent.SetDestination(this.gameObject.transform.position);
@@ -232,7 +248,8 @@ public class WaiterStates : MonoBehaviour
     IEnumerator Wait()
     {
         tookOrder = true;
-        
+        Animator.SetBool("isWalking", false);
+        Animator.SetBool("isCarrying", false);
         while (elapsedTime < fillDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -248,6 +265,8 @@ public class WaiterStates : MonoBehaviour
 
     private void Idle()
     {
+        Animator.SetBool("isWalking", false);
+        Animator.SetBool("isCarrying", false);
         progressBar.fillAmount = 0f;
         elapsedTime = 0;
         foundaCustomer = false;
