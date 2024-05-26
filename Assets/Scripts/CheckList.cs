@@ -42,7 +42,13 @@ public class CheckList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         instance = this;
+=======
+
+        instance = this;
+        soldFoodCount = 0;
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame

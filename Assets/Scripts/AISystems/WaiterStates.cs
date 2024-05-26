@@ -163,7 +163,7 @@ public class WaiterStates : MonoBehaviour
         {
             assignedCustomer.GetComponent<CustomerStates>().Eat();
 
-            
+            CheckList.instance.soldFoodCount++;
             assignedCustomer = null;
             hasFood = false;
             EconomyManager.instance.AddMoney(food.GetComponent<Food>().foodso.foodValue);
