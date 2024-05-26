@@ -122,7 +122,7 @@ public class WaiterStates : MonoBehaviour
             Animator.SetBool("isWalking", true);
             Animator.SetBool("isCarrying", false);
             agent.SetDestination(counter.transform.position);
-            if (Vector3.Distance(this.transform.position, counter.transform.position) < 1f && hasFood == false)
+            if (Vector3.Distance(this.transform.position, counter.transform.position) < 2f && hasFood == false)
             {
                 GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
                 foreach (GameObject carriedfood in foods)
