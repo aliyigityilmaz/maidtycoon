@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,11 @@ public class DayLoop : MonoBehaviour
     [SerializeField]
     private float soldAmount;
 
+    public TextMeshProUGUI rentText;
+    public TextMeshProUGUI soldAmountText;
+    public TextMeshProUGUI wageText;
+
+    public GameObject endOfTheDayPanel;
     private void Awake()
     {
         instance = this;
@@ -48,13 +54,21 @@ public class DayLoop : MonoBehaviour
             day++;
             dayText.text = day.ToString();
             currentTime = 0f;
-            StartDay();
+            //StartDay();
+            
         }
+        if (EconomyManager.instance.isBust)
+        {
+            endOfTheDayPanel.SetActive(false);
+        }
+
     }
 
     public void StartDay()
     {
         howManySold = 0;
+        Time.timeScale = 1f;
+        endOfTheDayPanel.SetActive(false);
     }
 
     public void EndDay()
@@ -67,8 +81,13 @@ public class DayLoop : MonoBehaviour
         {
             soldAmount += 2.5f;
         }
+        endOfTheDayPanel.SetActive(true);
+        Time.timeScale = 0f;
         int totalCost = (int)(dailyRent + dailyWages + soldAmount);
         economyManager.Pay(totalCost);
+        rentText.text = dailyRent.ToString();
+        soldAmountText.text = soldAmount.ToString();
+        wageText.text = dailyWages.ToString();
     }
 
     public void AddSold()

@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodID: 9
   foodName: Sakura Cake
-  foodValue: 20
-  foodTimer: 3
+  foodValue: 50

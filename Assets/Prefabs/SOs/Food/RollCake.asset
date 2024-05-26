@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodID: 8
   foodName: Roll Cake
-  foodValue: 20
-  foodTimer: 3
+  foodValue: 40

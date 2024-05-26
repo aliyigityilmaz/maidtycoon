@@ -14,6 +14,7 @@ public class EconomyManager : MonoBehaviour
 
     public GameObject bustPanel;
 
+    public bool isBust = false;
 
     private void Awake()
     {
@@ -53,5 +54,6 @@ public class EconomyManager : MonoBehaviour
     {
         bustPanel.SetActive(true);
         Time.timeScale = 0;
+        isBust = true;
     }
 }

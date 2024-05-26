@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodID: 6
   foodName: Pancake
-  foodValue: 35
-  foodTimer: 5
+  foodValue: 50
