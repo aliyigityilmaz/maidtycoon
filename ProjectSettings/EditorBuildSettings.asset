@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 57f1c7b5c3f9b6e4eb37294bd65e9d66
   - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: ba83abd233bf0ba468023b8d9dab44fa
+  - enabled: 1
     path: Assets/Scenes/Prototip.unity
     guid: 85d4646756010f44d9514bb70c60b19b
   - enabled: 1
@@ -17,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototip 2.unity
     guid: 8c772c0ee8af6d148adc70d6bc0f79ad
-  - enabled: 1
-    path: Assets/Scenes/Lose Screen.unity
-    guid: 8863d21b607e7e0469f1dd79f160ee14
   m_configObjects: {}
