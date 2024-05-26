@@ -3422,6 +3422,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOccupied: 0
+--- !u!1 &1817863618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4585843167304871195, guid: fe0edce2b6bc88642a3fca7c73766a44,
+    type: 3}
+  m_PrefabInstance: {fileID: 7428058545273887131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825970063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,7 +3987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 100
   moneyCountText: {fileID: 1248475865}
-  bustPanel: {fileID: 0}
+  bustPanel: {fileID: 1817863618}
 --- !u!114 &2082501670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9705,9 +9711,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2082501666}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684852337925831107, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpgradeMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7452621751972808817, guid: 9943c1eef9c473c40a3b3b54862b606f,
         type: 3}
       propertyPath: m_Name
@@ -11061,6 +11087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496723382936237790, guid: 866437db4cb9382489ee28cc566f82df,
+        type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8958513449651649632, guid: 866437db4cb9382489ee28cc566f82df,
         type: 3}

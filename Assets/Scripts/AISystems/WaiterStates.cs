@@ -171,7 +171,7 @@ public class WaiterStates : MonoBehaviour
             }
         }
         agent.SetDestination(assignedCustomer.transform.position);
-        if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
+        if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 2f)
         {
             assignedCustomer.GetComponent<CustomerStates>().Eat();
             Animator.SetBool("isCarrying", false);
@@ -224,7 +224,7 @@ public class WaiterStates : MonoBehaviour
         {
             agent.SetDestination(assignedCustomer.transform.position);
             
-            if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 1.5f)
+            if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 2f)
             {
                 agent.SetDestination(this.gameObject.transform.position);
                 tookOrder = false;
