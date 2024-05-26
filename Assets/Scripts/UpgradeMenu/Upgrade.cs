@@ -70,8 +70,9 @@ public class Upgrade : MonoBehaviour
             EconomyManager.instance.money -= moneyAmount;
         }
     }
-    public void FoodPrices(int multiply)
+    public void FoodPrices(int number)
     {
+        OrderSystem.instance.UpgradeBool(number);
         CheckList.instance.foodUpgrades++;
     }
 

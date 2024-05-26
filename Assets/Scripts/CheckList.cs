@@ -39,6 +39,9 @@ public class CheckList : MonoBehaviour
     public int cafeCount;
     public int waiterCount;
     public int foodCount;
+
+
+    public GameObject lastBlackScreen;
     // Start is called before the first frame update
     void Start()
     {

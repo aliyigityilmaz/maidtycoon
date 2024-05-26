@@ -1933,6 +1933,16 @@ MonoBehaviour:
   counter: {fileID: 6975037188182257779}
   waitingToOrder: []
   activeOrders: []
+  firstUpgrade: 0
+  firstUpgradeMultiplier: 2
+  secondUpgrade: 0
+  secondUpgradeMultiplier: 5
+  thirdUpgrade: 0
+  thirdUpgradeMultiplier: 10
+  fourthUpgrade: 0
+  fourthUpgradeMultiplier: 0
+  fifthUpgrade: 0
+  fifthUpgradeMultiplier: 0
 --- !u!4 &873061290
 Transform:
   m_ObjectHideFlags: 0
@@ -4175,6 +4185,7 @@ MonoBehaviour:
   cafeCount: 0
   waiterCount: 0
   foodCount: 0
+  lastBlackScreen: {fileID: 0}
 --- !u!114 &2082501672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11766,31 +11777,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159117325}
     m_Modifications:
-    - target: {fileID: 1421016480553486617, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035279320998999383, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035279320998999383, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035279320998999383, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 502.5085
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035279320998999383, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -174.267
-      objectReference: {fileID: 0}
     - target: {fileID: 3008887060330708052, guid: c0b45f3c22c50f64293e99bf08de5f51,
         type: 3}
       propertyPath: m_Pivot.x
@@ -11891,81 +11877,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3783819930209849984, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426021008168758053, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 821260354}
-    - target: {fileID: 4809592436717144566, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809592436717144566, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809592436717144566, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 502.5085
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809592436717144566, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -53.089
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743731067647922536, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852782415374535847, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852782415374535847, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852782415374535847, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 502.5085
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852782415374535847, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -295.445
-      objectReference: {fileID: 0}
-    - target: {fileID: 7069738352393431348, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 227227735}
     - target: {fileID: 8566868864226997730, guid: c0b45f3c22c50f64293e99bf08de5f51,
         type: 3}
       propertyPath: m_Name
       value: Food Upgrade Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 8566868864226997730, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8764344355305751543, guid: c0b45f3c22c50f64293e99bf08de5f51,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 580979491}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

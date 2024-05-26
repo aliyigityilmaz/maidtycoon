@@ -25,6 +25,10 @@ public class OrderSystem : MonoBehaviour
     public float secondUpgradeMultiplier;
     public bool thirdUpgrade;
     public float thirdUpgradeMultiplier;
+    public bool fourthUpgrade;
+    public float fourthUpgradeMultiplier;
+    public bool fifthUpgrade;
+    public float fifthUpgradeMultiplier;
 
 
     private void Awake()
@@ -43,7 +47,9 @@ public class OrderSystem : MonoBehaviour
         //
 
         food.GetComponent<Food>().value = Mathf.RoundToInt(food.GetComponent<Food>().value * 
-            (thirdUpgrade ? thirdUpgradeMultiplier : 
+            (fifthUpgrade ? fifthUpgradeMultiplier :
+            fourthUpgrade ? fourthUpgradeMultiplier :
+            thirdUpgrade ? thirdUpgradeMultiplier : 
             secondUpgrade ? secondUpgradeMultiplier : 
             firstUpgrade ? firstUpgradeMultiplier : 1));
 
@@ -96,7 +102,29 @@ public class OrderSystem : MonoBehaviour
         Debug.Log("Removing from waiting list");
         waitingToOrder.Remove(customer);
     }
-
+    public void UpgradeBool(int upgradeNumber)
+    {
+        if (upgradeNumber == 1)
+        {
+            firstUpgrade = true;
+        }
+        if(upgradeNumber == 2)
+        {
+            secondUpgrade = true;
+        }
+        if (upgradeNumber == 3)
+        {
+            thirdUpgrade = true;
+        }
+        if (upgradeNumber == 4)
+        {
+            fourthUpgrade = true;
+        }
+        if (upgradeNumber == 5)
+        {
+            fifthUpgrade = true;
+        }
+    }
 
 
 }
