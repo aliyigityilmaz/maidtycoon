@@ -19,6 +19,7 @@ public class EconomyManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -56,4 +57,6 @@ public class EconomyManager : MonoBehaviour
         Time.timeScale = 0;
         isBust = true;
     }
+
+    
 }

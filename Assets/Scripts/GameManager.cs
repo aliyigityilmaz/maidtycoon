@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager instance;
 
     public List<GameObject> chairPoints;
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject pausePanel;
     public bool gamePaused = false;
 
+    public bool isGameStarted = false;
+
     private void Awake()
     {
         instance = this;
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         UpdateChairList();
         pausePanel.SetActive(false);
     }
