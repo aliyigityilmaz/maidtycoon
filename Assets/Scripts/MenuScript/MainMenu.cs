@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject creditsMenu;
     [SerializeField] private bool creditsActive;
 
+    public GameObject fadeScreen;
     private void Start()
     {
         creditsMenu.SetActive(false);
@@ -16,7 +17,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        fadeScreen.SetActive(true);
     }
 
     public void QuitGame()
