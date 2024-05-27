@@ -22615,6 +22615,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -229.68001
       objectReference: {fileID: 0}
+    - target: {fileID: 1999759297130608633, guid: 69b2c8b8987456b49b43103b2226448a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501671}
+    - target: {fileID: 1999759297130608633, guid: 69b2c8b8987456b49b43103b2226448a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevelButton
+      objectReference: {fileID: 0}
     - target: {fileID: 2145366488771408048, guid: 69b2c8b8987456b49b43103b2226448a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -39109,7 +39119,7 @@ MonoBehaviour:
   waiterUpgrades: 0
   waiterUpgradesThisLevel: 4
   soldFoodCount: 0
-  requiredFoodCount: 50
+  requiredFoodCount: 20
   allCafeUpgrades: 0
   allWaiterUpgrades: 0
   allFoodUpgrades: 0
