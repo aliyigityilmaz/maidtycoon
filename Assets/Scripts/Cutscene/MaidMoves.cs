@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 
 public class MaidMoves : MonoBehaviour
@@ -12,7 +13,7 @@ public class MaidMoves : MonoBehaviour
     public Animator animator;
     public Transform spawnPoint;
 
-    private float speed = 0.5f;
+    private float speed = 1f;
 
     public GameObject dialogueBox;
     // Start is called before the first frame update
@@ -44,6 +45,7 @@ public class MaidMoves : MonoBehaviour
         if (reached)
         {
             spawned = false;
+            if (dialogueBox == null) return;
             dialogueBox.SetActive(true);
         }
             

@@ -33,7 +33,6 @@ public class Dialogue : MonoBehaviour
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
-                blackScreen.SetActive(true);
             }
         }
     }
