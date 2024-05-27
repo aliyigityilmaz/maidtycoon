@@ -57,6 +57,10 @@ public class DayLoop : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.instance.isGameStarted == false)
+        {
+            return;
+        }
         currentTime += Time.deltaTime;
         timerImage.fillAmount = currentTime / dayLength;
         if (currentTime >= dayLength)

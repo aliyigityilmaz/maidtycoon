@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        isGameStarted = false;
         Time.timeScale = 1;
         UpdateChairList();
         pausePanel.SetActive(false);
@@ -115,6 +116,11 @@ public class GameManager : MonoBehaviour
         {
             optionsMenu.SetActive(false);
         }
+    }
+
+    public void StartGame()
+    {
+        isGameStarted = true;
     }
 
 }

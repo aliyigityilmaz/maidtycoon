@@ -24,6 +24,8 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GameManager.instance.isGameStarted)
+        return;
         if (currentCustomers < maxCustomers && canSpawn)
         {
             spawnTimer += Time.deltaTime;
