@@ -38,7 +38,7 @@ public class WaiterStates : MonoBehaviour
     [SerializeField] private Image progressBar;
     private float fillDuration = 2f;
     private float elapsedTime;
-    private Camera camera;
+    private Camera m_camera;
 
 
     private Animator Animator;
@@ -59,7 +59,7 @@ public class WaiterStates : MonoBehaviour
         currentState = State.Idle;
         instance = this;
         Animator = GetComponent<Animator>();
-        camera = Camera.main;
+        m_camera = Camera.main;
         counter = GameObject.FindGameObjectWithTag("FoodCounter");
         carry = transform.GetChild(0);
     }
@@ -69,7 +69,7 @@ public class WaiterStates : MonoBehaviour
     {
         agent.acceleration = agentSpeed;
         agent.speed = agentSpeed;
-        progressBar.transform.LookAt(transform.position + camera.transform.rotation * Vector3.forward, camera.transform.rotation * Vector3.up);
+        progressBar.transform.LookAt(transform.position + m_camera.transform.rotation * Vector3.forward, m_camera.transform.rotation * Vector3.up);
         switch (currentState)
         {
             case State.Idle:
