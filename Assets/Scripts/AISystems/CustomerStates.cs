@@ -37,6 +37,11 @@ public class CustomerStates : MonoBehaviour
     public float waitingTimer;
     private float timer = 0;
 
+
+    [Header("VFX")]
+    public GameObject[] happyVfx;
+    public GameObject[] angryVfx;
+
     private enum State
     {
         Searching,
@@ -96,6 +101,7 @@ public class CustomerStates : MonoBehaviour
             if (timer <= 0)
             {
                 currentState = State.Leaving;
+                DisplayRandomAngryVFX();
             }
         }
         else
@@ -108,6 +114,8 @@ public class CustomerStates : MonoBehaviour
             transform.position = randomChair.transform.position;
         }
     }
+
+
     private void Searching()
     {
         randomChair = GameManager.instance.GetRandomChair();
@@ -184,6 +192,7 @@ public class CustomerStates : MonoBehaviour
 
     private void Eating()
     {
+        DisplayRandomHappyVFX();
         StartCoroutine(EatingTimer());
         if (finishedEating)
         {
@@ -257,6 +266,19 @@ public class CustomerStates : MonoBehaviour
                 closestTable = table;
             }
         }
+    }
+
+
+    private void DisplayRandomAngryVFX()
+    {
+        int index = UnityEngine.Random.Range(0, angryVfx.Length);
+        Instantiate(angryVfx[index], transform.position, Quaternion.identity);
+    }
+
+    private void DisplayRandomHappyVFX()
+    {
+        int index = UnityEngine.Random.Range(0, happyVfx.Length);
+        Instantiate(happyVfx[index], transform.position, Quaternion.identity);
     }
 
 

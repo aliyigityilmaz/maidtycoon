@@ -466,6 +466,21 @@ MonoBehaviour:
   customerID: 0
   vfxs: []
   waitingTimer: 20
+  happyVfx:
+  - {fileID: 173990, guid: 69359de5f8759454bbfe449e619129bc, type: 3}
+  - {fileID: 180048, guid: 4a9bb31a555add44ba9d0dbc0c220e70, type: 3}
+  - {fileID: 185686, guid: 361bbb0ccc7564a488f726fb0599b78e, type: 3}
+  - {fileID: 1168024195345456, guid: 10ee181f684c0eb46b46b1bc2549b25a, type: 3}
+  - {fileID: 1904525989531952, guid: f57e08d89488661418c34eff8421ba63, type: 3}
+  - {fileID: 1088685859891442, guid: 5191704a2e96bb84588aabf49cb8869c, type: 3}
+  - {fileID: 1989385940842840, guid: eb6fa6e828fc3ae42ad25c1b4cf00414, type: 3}
+  angryVfx:
+  - {fileID: 180600, guid: f276f55eadaf0e34ba03d5b43bfbfae0, type: 3}
+  - {fileID: 1405008442520684, guid: ab9041fcf0d2ca5429b835df2786ef1e, type: 3}
+  - {fileID: 156528, guid: 93a7485b7f1564c4aae6a739c3edc50e, type: 3}
+  - {fileID: 120732, guid: 9e3b6489a85bfa04e844964c8c1e12ed, type: 3}
+  - {fileID: 1801004341784822, guid: de89eb4d167e00b4fab157953b8d3894, type: 3}
+  - {fileID: 128860, guid: bfd8b45b9bf378b408fdc5e3acd4992f, type: 3}
 --- !u!1 &4098869046236194286
 GameObject:
   m_ObjectHideFlags: 0
