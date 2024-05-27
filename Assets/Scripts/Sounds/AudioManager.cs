@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    public Sound[] musicSounds, vfxSounds;
+    public Sound[] musicSounds, goodSfxSounds, badSfxSounds;
     public AudioSource musicSource;
     public AudioSource sfxSource;
 
@@ -50,18 +50,20 @@ public class AudioManager : MonoBehaviour
         }
         currentMusic = s;
     }
-    public void PlayVFX(string name)
+    public void PlayRandomVFX(bool isGood)
     {
-        Sound s = Array.Find(vfxSounds, sound => sound.name == name);
-        if (s == null)
+        Sound[] selectedArray = isGood ? goodSfxSounds : badSfxSounds;
+
+        if (selectedArray.Length == 0)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
+            Debug.LogWarning("No SFX found in the selected category!");
             return;
         }
-        else
-        {
-            sfxSource.PlayOneShot(s.clip);
-        }
+
+        int randomIndex = UnityEngine.Random.Range(0, selectedArray.Length);
+        Sound s = selectedArray[randomIndex];
+
+        sfxSource.PlayOneShot(s.clip);
     }
 
     public void PlayNextMusic()

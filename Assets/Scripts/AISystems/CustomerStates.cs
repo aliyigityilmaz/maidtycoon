@@ -100,8 +100,9 @@ public class CustomerStates : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                currentState = State.Leaving;
                 DisplayRandomAngryVFX();
+                AudioManager.instance.PlayRandomVFX(false);
+                currentState = State.Leaving;
             }
         }
         else
@@ -188,11 +189,12 @@ public class CustomerStates : MonoBehaviour
     public void Eat()
     {
         _Eating = true;
+        AudioManager.instance.PlayRandomVFX(true);
+        DisplayRandomHappyVFX();
     }
 
     private void Eating()
     {
-        DisplayRandomHappyVFX();
         StartCoroutine(EatingTimer());
         if (finishedEating)
         {
@@ -272,13 +274,15 @@ public class CustomerStates : MonoBehaviour
     private void DisplayRandomAngryVFX()
     {
         int index = UnityEngine.Random.Range(0, angryVfx.Length);
-        Instantiate(angryVfx[index], transform.position, Quaternion.identity);
+        GameObject randomVfx = Instantiate(angryVfx[index], transform.position, Quaternion.identity);
+        Destroy(randomVfx, 5);
     }
 
     private void DisplayRandomHappyVFX()
     {
         int index = UnityEngine.Random.Range(0, happyVfx.Length);
-        Instantiate(happyVfx[index], transform.position, Quaternion.identity);
+        GameObject randomVfx = Instantiate(happyVfx[index], transform.position, Quaternion.identity);
+        Destroy(randomVfx, 5);
     }
 
 
