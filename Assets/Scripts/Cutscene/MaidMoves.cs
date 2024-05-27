@@ -12,7 +12,7 @@ public class MaidMoves : MonoBehaviour
     public Animator animator;
     public Transform spawnPoint;
 
-    private float speed = 1f;
+    private float speed = 0.5f;
 
     public GameObject dialogueBox;
     // Start is called before the first frame update
