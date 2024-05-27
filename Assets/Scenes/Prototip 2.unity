@@ -28553,6 +28553,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Of The Day Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 9142828657352319087, guid: 44f3789d7239d56448ffc835d0745cde,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501670}
+    - target: {fileID: 9142828657352319087, guid: 44f3789d7239d56448ffc835d0745cde,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartDay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
