@@ -275,14 +275,14 @@ public class CustomerStates : MonoBehaviour
     private void DisplayRandomAngryVFX()
     {
         int index = UnityEngine.Random.Range(0, angryVfx.Length);
-        GameObject randomVfx = Instantiate(angryVfx[index], transform.position, Quaternion.identity);
+        GameObject randomVfx = Instantiate(angryVfx[index], new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
         Destroy(randomVfx, 5);
     }
 
     private void DisplayRandomHappyVFX()
     {
         int index = UnityEngine.Random.Range(0, happyVfx.Length);
-        GameObject randomVfx = Instantiate(happyVfx[index], transform.position, Quaternion.identity);
+        GameObject randomVfx = Instantiate(happyVfx[index], new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
         Destroy(randomVfx, 5);
     }
 
