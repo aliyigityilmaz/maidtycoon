@@ -89337,6 +89337,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024778002}
   m_Mesh: {fileID: -6292342121008413548, guid: 0e02dda00599ec64ea6c23d317cdb37f, type: 3}
+--- !u!1 &2026334433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026334434}
+  m_Layer: 0
+  m_Name: SpawnPointForMaids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026334434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026334433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -37.5, y: 5.43, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028223400
 GameObject:
   m_ObjectHideFlags: 0
@@ -92428,6 +92459,12 @@ MonoBehaviour:
   gamePaused: 0
   optionsMenu: {fileID: 50272295}
   isGameStarted: 0
+  maids:
+  - {fileID: 7718582273604078300, guid: 692a2892e3e808a48b2a8ddc030deaee, type: 3}
+  - {fileID: 5876103008156998331, guid: 4226c9bc04a95c5459e016a83c5e4a3f, type: 3}
+  - {fileID: 4911529585818288019, guid: 866437db4cb9382489ee28cc566f82df, type: 3}
+  - {fileID: 1388882791311838275, guid: e47a2e02ffdb2f5429f504bdc6717ed5, type: 3}
+  spawnPoint: {fileID: 2026334434}
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0
@@ -103546,6 +103583,7 @@ GameObject:
   - component: {fileID: 6773027495287598090}
   - component: {fileID: 6366982310710044101}
   - component: {fileID: 1585756630710112382}
+  - component: {fileID: 6773027495287598091}
   m_Layer: 0
   m_Name: CashCounter_Lvl3
   m_TagString: Untagged
@@ -119004,6 +119042,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1912948654}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!208 &6773027495287598091
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233062757157415658}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.014, z: 0.007}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.002, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6775023949930393103
 GameObject:
   m_ObjectHideFlags: 0
@@ -126235,6 +126289,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2026334434}
   - {fileID: 1114734370}
   - {fileID: 1129641905}
   - {fileID: 947589541}

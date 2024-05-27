@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
 
     public bool isGameStarted = false;
 
+    [SerializeField] private GameObject[] maids;
+    [SerializeField] private Transform spawnPoint;
+
     private void Awake()
     {
         instance = this;
@@ -99,6 +102,22 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.buildIndex+1);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.buildIndex - 1);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            int randomMaid = UnityEngine.Random.Range(0, maids.Length);
+            Instantiate(maids[randomMaid], spawnPoint.position, Quaternion.identity);            
         }
     }
     public void PauseGame()
