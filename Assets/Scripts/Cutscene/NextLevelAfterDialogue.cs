@@ -18,6 +18,7 @@ public class NextLevelAfterDialogue : MonoBehaviour
     }
     public void GoToNextLevelAfterDialogue()
     {
-        SceneManager.LoadScene(2);
+        int sceneNumber = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneNumber + 1);
     }
 }
