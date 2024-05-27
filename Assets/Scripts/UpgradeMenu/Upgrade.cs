@@ -75,6 +75,7 @@ public class Upgrade : MonoBehaviour
     {
         OrderSystem.instance.UpgradeBool(number);
         CheckList.instance.foodUpgrades++;
+        this.gameObject.SetActive(false);
     }
 
 }
