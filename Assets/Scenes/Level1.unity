@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1114734369}
   m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -4316,74 +4316,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23d3239a8fd910479b1cbb5e07a13ef, type: 3}
---- !u!1001 &1126620147
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -33.19651
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.997668
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5699511137164067877, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718582273604078300, guid: 692a2892e3e808a48b2a8ddc030deaee,
-        type: 3}
-      propertyPath: m_Name
-      value: Maid1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 692a2892e3e808a48b2a8ddc030deaee, type: 3}
 --- !u!1 &1129641904
 GameObject:
   m_ObjectHideFlags: 0
@@ -8358,9 +8290,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1f125ac3a93a4cb88ba0c043986bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 120
+  dayLength: 20
   dailyRent: 100
   dailyWages: 50
+  skyboxes:
+  - {fileID: 2100000, guid: fa95802f80bd745cfb5e9c89f7e22341, type: 2}
+  - {fileID: 2100000, guid: 123caa41e84e041d0bd65bb3ae888dd1, type: 2}
+  - {fileID: 2100000, guid: ab675e6698bde46fd87143fb0d7580cb, type: 2}
+  - {fileID: 2100000, guid: f8a60d169ab8a46b09c9b01a3e51601f, type: 2}
+  directionalLight: {fileID: 1114734369}
   day: 1
   timerImage: {fileID: 1670762510}
   dayText: {fileID: 158736869}
@@ -19824,4 +19762,3 @@ SceneRoots:
   - {fileID: 268928517}
   - {fileID: 2042630073}
   - {fileID: 2016030044}
-  - {fileID: 1126620147}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,11 @@ public class DayLoop : MonoBehaviour
 
     public float dailyRent = 100f;
     public float dailyWages = 50f;
+
+    [Header("Skyboxes")]
+    public Material[] skyboxes;
+    public Light directionalLight;
+    private int currentSkyboxIndex = 0;
     
 
     public int day = 1;
@@ -65,11 +71,51 @@ public class DayLoop : MonoBehaviour
             //StartDay();
             
         }
+
+        if (currentTime < dayLength)
+        {
+            float cycle = currentTime / dayLength;
+            UpdateSkyboxAndLighting(cycle);
+        }
+
+
+
+
         if (EconomyManager.instance.isBust)
         {
             endOfTheDayPanel.SetActive(false);
         }
 
+    }
+
+    void UpdateSkyboxAndLighting(float cycle)
+    {
+        if (cycle >= 0.25f && cycle < 0.5f)
+        {
+            currentSkyboxIndex = 1;
+            directionalLight.color = Color.Lerp(directionalLight.color, new Color(1f, 0.5f, 0.5f), Time.deltaTime);
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.7f, Time.deltaTime);
+        }
+        else if (cycle >= 0.5f && cycle < 0.75f)
+        {
+            currentSkyboxIndex = 2;
+            directionalLight.color = Color.Lerp(directionalLight.color, new Color(0.5f, 0.5f, 1f), Time.deltaTime);
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.4f, Time.deltaTime);
+        }
+        else if (cycle >= 0.75f && cycle < 1f)
+        {
+            currentSkyboxIndex = 3;
+            directionalLight.color = Color.Lerp(directionalLight.color, new Color(0.1f, 0.1f, 0.3f), Time.deltaTime);
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 0.1f, Time.deltaTime);
+        }
+        else
+        {
+            currentSkyboxIndex = 0;
+            directionalLight.color = Color.Lerp(directionalLight.color, new Color(1f, 1f, 0.8f), Time.deltaTime);
+            directionalLight.intensity = Mathf.Lerp(directionalLight.intensity, 1f, Time.deltaTime);
+        }
+
+        RenderSettings.skybox = skyboxes[currentSkyboxIndex];
     }
 
     public void StartDay()
