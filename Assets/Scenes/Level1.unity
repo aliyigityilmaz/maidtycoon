@@ -6066,7 +6066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1f125ac3a93a4cb88ba0c043986bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 20
+  dayLength: 90
   dailyRent: 100
   dailyWages: 50
   skyboxes:
@@ -6204,7 +6204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ef6193786e32147b1db822fef19563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 0}
 --- !u!1001 &2088468264
 PrefabInstance:
   m_ObjectHideFlags: 0

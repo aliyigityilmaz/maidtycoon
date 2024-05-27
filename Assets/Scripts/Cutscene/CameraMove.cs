@@ -21,6 +21,10 @@ public class CameraMove : MonoBehaviour
             float moveSpeed = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, cameraTarget.position, moveSpeed);
         }
+        else
+        {
+            Debug.Log("Maid not spawned");
+        }
         
     }
 }

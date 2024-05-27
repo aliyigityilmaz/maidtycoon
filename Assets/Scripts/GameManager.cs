@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -31,7 +32,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        isGameStarted = false;
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "Level1")
+        {
+            isGameStarted = false;
+        }
+        else
+        {
+            StartGame();
+        }
         Time.timeScale = 1;
         UpdateChairList();
         pausePanel.SetActive(false);

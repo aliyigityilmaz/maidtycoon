@@ -1289,6 +1289,7 @@ MonoBehaviour:
   currentCustomers: 0
   spawnRate: 1
   spawnTimer: 0
+  canSpawn: 1
 --- !u!1 &580979491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,12 +1842,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: -0.002}
   m_TimeToStationary: 0.5
---- !u!1 &805436251 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1447371475149332316, guid: 4464c079ffa8fde419dcef8d8bce3e85,
-    type: 3}
-  m_PrefabInstance: {fileID: 5122829933899464774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &806956737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,12 +2913,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326976407}
   m_Mesh: {fileID: 5210647985227340560, guid: 8eff21a04099ce04db65c8f8566e535f, type: 3}
---- !u!1 &1362197663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1923631143934206442, guid: 4464c079ffa8fde419dcef8d8bce3e85,
-    type: 3}
-  m_PrefabInstance: {fileID: 5122829933899464774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1362680351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3587,12 +3576,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd4fee66ed48e3243b251da5c5d677e8, type: 3}
---- !u!1 &1641866458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3202393880368267411, guid: 4464c079ffa8fde419dcef8d8bce3e85,
-    type: 3}
-  m_PrefabInstance: {fileID: 5122829933899464774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1670762510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1522191839410946303, guid: 4464c079ffa8fde419dcef8d8bce3e85,
@@ -4414,6 +4397,8 @@ MonoBehaviour:
       m_Calls: []
   pausePanel: {fileID: 1871407908}
   gamePaused: 0
+  optionsMenu: {fileID: 0}
+  isGameStarted: 0
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0
@@ -4468,6 +4453,7 @@ MonoBehaviour:
   money: 100
   moneyCountText: {fileID: 1248475865}
   bustPanel: {fileID: 0}
+  isBust: 0
 --- !u!114 &2082501670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4483,11 +4469,19 @@ MonoBehaviour:
   dayLength: 60
   dailyRent: 100
   dailyWages: 50
+  skyboxes: []
+  directionalLight: {fileID: 0}
   day: 1
   timerImage: {fileID: 1670762510}
   dayText: {fileID: 158736869}
   howManySold: 0
   soldAmount: 0
+  rentText: {fileID: 0}
+  soldAmountText: {fileID: 0}
+  wageText: {fileID: 0}
+  totalIncome: {fileID: 0}
+  totalIncomeInt: 0
+  endOfTheDayPanel: {fileID: 0}
 --- !u!114 &2082501671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,6 +4519,7 @@ MonoBehaviour:
   cafeCount: 0
   waiterCount: 0
   foodCount: 0
+  blackscreen: {fileID: 0}
 --- !u!114 &2082501672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4537,10 +4532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef4c4b0d449fc44e8fa87cce2750643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSoundObject: {fileID: 1641866458}
+  offSoundObject: {fileID: 0}
   onSoundObject: {fileID: 844668726}
-  offMusicObject: {fileID: 805436251}
-  onMusicObject: {fileID: 1362197663}
+  offMusicObject: {fileID: 0}
+  onMusicObject: {fileID: 0}
   isSoundOff: 0
   isMusicOff: 0
 --- !u!1001 &2088468264
@@ -5685,7 +5680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &938118488937661532
 GameObject:
   m_ObjectHideFlags: 0
@@ -11651,13 +11646,13 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7971985203086433000, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: -1796300093539065552, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: -8848810374240701247, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: -1580535799172915004, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: 8624350366382393546, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: 6853559446172670986, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
-  - {fileID: -7874507407092140199, guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99, type: 3}
+  - {fileID: 2100000, guid: 6e0e583cad00f7b46b1d4da6799a5c8a, type: 2}
+  - {fileID: 2100000, guid: 27040313caaee9c47b2ae233896c4a18, type: 2}
+  - {fileID: 2100000, guid: c87968a30129de8488fa83f25d9212de, type: 2}
+  - {fileID: 2100000, guid: 712b9b4c17cebcc4bb71e5e025c00a4b, type: 2}
+  - {fileID: 2100000, guid: 81ef380ad72126144971845e00ab6acc, type: 2}
+  - {fileID: 2100000, guid: b3b6dda7d61881d4fab226d65c4182ab, type: 2}
+  - {fileID: 2100000, guid: 17a05957a5200b242a13d8f19546aa94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
