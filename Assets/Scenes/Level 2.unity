@@ -45307,8 +45307,8 @@ MonoBehaviour:
   maxHorizontalAngle: 200
   minHorizontalAngle: 70
   zoomSpeed: 100
-  maxZoom: 40
-  minZoom: 20
+  maxZoom: 60
+  minZoom: 30
 --- !u!1 &275525777601109210
 GameObject:
   m_ObjectHideFlags: 0
