@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnFoodAte;
 
     public GameObject pausePanel;
+    
     public bool gamePaused = false;
+
+    public GameObject optionsMenu;
 
     public bool isGameStarted = false;
 
@@ -99,6 +102,18 @@ public class GameManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             gamePaused = true;
+        }
+    }
+
+    public void OptionsMenu()
+    {
+        if (optionsMenu.activeSelf == false)
+        {
+            optionsMenu.SetActive(true);
+        }
+        else
+        {
+            optionsMenu.SetActive(false);
         }
     }
 

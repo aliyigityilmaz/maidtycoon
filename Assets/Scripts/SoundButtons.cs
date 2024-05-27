@@ -31,23 +31,27 @@ public class SoundButtons : MonoBehaviour
         offMusicObject.SetActive(false);
         onMusicObject.SetActive(true);
         isMusicOff = false;
+        AudioManager.instance.MusicToggle();
     }
     public void MusicButtonClose()
     {
         offMusicObject.SetActive(true);
         onMusicObject.SetActive(false);
         isMusicOff = true;
+        AudioManager.instance.MusicToggle();
     }
     public void SoundButtonOpen()
     {
         offSoundObject.SetActive(false);
         onSoundObject.SetActive(true);
-        isSoundOff = false;  
+        isSoundOff = false;
+        AudioManager.instance.SFXToggle();
     }
     public void SoundButtonClose()
     {
         offSoundObject.SetActive(true);
         onSoundObject.SetActive(false);
         isSoundOff = true;
+        AudioManager.instance.SFXToggle();
     }
 }
