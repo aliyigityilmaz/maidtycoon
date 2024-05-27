@@ -42,6 +42,7 @@ public class CustomerStates : MonoBehaviour
     public GameObject[] happyVfx;
     public GameObject[] angryVfx;
 
+
     private enum State
     {
         Searching,

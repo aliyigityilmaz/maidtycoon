@@ -56,6 +56,7 @@ public class Upgrade : MonoBehaviour
             foreach (GameObject agent in GameObject.FindGameObjectsWithTag("Waiter"))
             {
                 agent.GetComponent<WaiterStates>().agentSpeed += multiply;
+                //WaiterStates.instance.agentSpeed += multiply;
             }
             this.gameObject.SetActive(false);
             CheckList.instance.waiterUpgrades++;
