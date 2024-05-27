@@ -3,11 +3,46 @@ guid: 09c4b6ffbe16b8b4aa22f0716ac1ed99
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 712b9b4c17cebcc4bb71e5e025c00a4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maid4Eye
+    second: {fileID: 2100000, guid: 81ef380ad72126144971845e00ab6acc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maid4Hair
+    second: {fileID: 2100000, guid: 6e0e583cad00f7b46b1d4da6799a5c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ribbon
+    second: {fileID: 2100000, guid: 17a05957a5200b242a13d8f19546aa94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinColor
+    second: {fileID: 2100000, guid: 27040313caaee9c47b2ae233896c4a18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: c87968a30129de8488fa83f25d9212de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteEmission
+    second: {fileID: 2100000, guid: b3b6dda7d61881d4fab226d65c4182ab, type: 2}
   materials:
-    materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialImportMode: 1
+    materialName: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
