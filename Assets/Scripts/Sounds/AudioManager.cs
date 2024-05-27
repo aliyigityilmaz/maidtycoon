@@ -31,6 +31,8 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic("Autumn Leaves");
         musicText.text = "Currently Playing: "+musicSource.clip.name;
+        musicSlider.value = 0.15f;
+        musicSlider.value = musicSource.volume;
     }
 
     public void PlayMusic(string name)
