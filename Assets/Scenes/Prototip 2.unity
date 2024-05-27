@@ -83700,7 +83700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1f125ac3a93a4cb88ba0c043986bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 90
+  dayLength: 120
   dailyRent: 100
   dailyWages: 50
   skyboxes:

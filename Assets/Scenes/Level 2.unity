@@ -6422,6 +6422,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 337312044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &337312046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 658112495982300773, guid: 98ea67a8721c34e4893fde37acfa85ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 337312044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &343247992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10216,7 +10222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerList:
   - {fileID: 4084766383925149019, guid: 94adbfb8d8ad31342a5459db6ca03914, type: 3}
-  maxCustomers: 8
+  maxCustomers: 2
   currentCustomers: 0
   spawnRate: 10
   spawnTimer: 0
@@ -17123,9 +17129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderList:
-  - {fileID: 900637592564994423, guid: 78bbd03f28d43d942bb7ffb8346c0fc9, type: 3}
-  - {fileID: 900637592564994423, guid: b4206fbfa1356a347ac5fede2152e66e, type: 3}
-  counter: {fileID: 6975037188182257779}
+  - {fileID: 6187938382242670692, guid: 7f8c72ce6f90b8148b3b31251782d574, type: 3}
+  - {fileID: 8762223608369800632, guid: 44a5ce694d12c91459fd1a367605089c, type: 3}
+  - {fileID: 2105740800729120805, guid: 89bab29d9ad4e3b43b4c10fbabc3a731, type: 3}
+  - {fileID: 7124291890698842832, guid: d6de104bd33358446be911e0d86db2c3, type: 3}
+  - {fileID: 5811714388243690790, guid: a54ba7789b7b10145ba94a6f36e329bd, type: 3}
+  - {fileID: 5793805816906257614, guid: 583d3000f10500f449b6e22218b83d77, type: 3}
+  - {fileID: 3421793711988466675, guid: ba3aea49b0e8f974b8d47b62186e2af7, type: 3}
+  - {fileID: 4734411261523598225, guid: 9c6600d679d1eff438e0e8f389652b11, type: 3}
+  - {fileID: 521866002206872798, guid: e7f7392c322555545ba43f50968cbd28, type: 3}
+  counter: {fileID: 337312046}
   waitingToOrder: []
   activeOrders: []
   firstUpgrade: 0
@@ -17135,7 +17148,7 @@ MonoBehaviour:
   thirdUpgrade: 0
   thirdUpgradeMultiplier: 10
   fourthUpgrade: 0
-  fourthUpgradeMultiplier: 25
+  fourthUpgradeMultiplier: 0
   fifthUpgrade: 0
   fifthUpgradeMultiplier: 0
 --- !u!4 &873061290
@@ -35274,6 +35287,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 7754520999073010166, guid: 4464c079ffa8fde419dcef8d8bce3e85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501664}
+    - target: {fileID: 7754520999073010166, guid: 4464c079ffa8fde419dcef8d8bce3e85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OptionsMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 8724457731526864257, guid: 4464c079ffa8fde419dcef8d8bce3e85,
         type: 3}
       propertyPath: m_Pivot.x
@@ -38356,6 +38379,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159117325}
     m_Modifications:
+    - target: {fileID: 336821067308534248, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 336821067308534248, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SFXToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 336821067308534248, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243297289435743557, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 3243297289435743557, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243297289435743557, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3420293942043608070, guid: c0b312b5d4063ae41be28b533a9c45bc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -38455,6 +38508,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622392051231716188, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 3622392051231716188, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SFXToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622392051231716188, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326016684932818743, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 5326016684932818743, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326016684932818743, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118545866997350439, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 6118545866997350439, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayNextMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021192317426529605, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 7021192317426529605, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163306360400848823, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501673}
+    - target: {fileID: 7163306360400848823, guid: c0b312b5d4063ae41be28b533a9c45bc,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SFXVolume
       objectReference: {fileID: 0}
     - target: {fileID: 8635225446687699077, guid: c0b312b5d4063ae41be28b533a9c45bc,
         type: 3}
@@ -40211,8 +40324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1f125ac3a93a4cb88ba0c043986bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 90
-  dailyRent: 100
+  dayLength: 120
+  dailyRent: 75
   dailyWages: 50
   skyboxes:
   - {fileID: 2100000, guid: fa95802f80bd745cfb5e9c89f7e22341, type: 2}

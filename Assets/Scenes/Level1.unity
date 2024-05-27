@@ -7736,8 +7736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1f125ac3a93a4cb88ba0c043986bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLength: 90
-  dailyRent: 100
+  dayLength: 120
+  dailyRent: 25
   dailyWages: 50
   skyboxes:
   - {fileID: 2100000, guid: fa95802f80bd745cfb5e9c89f7e22341, type: 2}
@@ -14937,6 +14937,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159117325}
     m_Modifications:
+    - target: {fileID: 2969788292727334464, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969788292727334464, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501125352229581895, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501125352229581895, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
     - target: {fileID: 4619499386678573860, guid: bbbc71bdd14408d47a1fba7d291e14e9,
         type: 3}
       propertyPath: m_Name
@@ -15041,6 +15061,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435449497745098500, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435449497745098500, guid: bbbc71bdd14408d47a1fba7d291e14e9,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15616,6 +15646,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 821260354}
+    - target: {fileID: 6584624061039918656, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584624061039918656, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
     - target: {fileID: 7592786375231499192, guid: 698ea9e079ec094449d720020d4fdf54,
         type: 3}
       propertyPath: m_Pivot.x
@@ -15715,6 +15755,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714834694281354637, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714834694281354637, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399368076537774645, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399368076537774645, guid: 698ea9e079ec094449d720020d4fdf54,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16018,6 +16078,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159117325}
     m_Modifications:
+    - target: {fileID: 494028400389181712, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 494028400389181712, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
     - target: {fileID: 3008887060330708052, guid: c0b45f3c22c50f64293e99bf08de5f51,
         type: 3}
       propertyPath: m_Pivot.x
@@ -16117,6 +16187,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981357686459133879, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981357686459133879, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534199478972793910, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534199478972793910, guid: c0b45f3c22c50f64293e99bf08de5f51,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 8566868864226997730, guid: c0b45f3c22c50f64293e99bf08de5f51,
         type: 3}
