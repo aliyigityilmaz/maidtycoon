@@ -7693,6 +7693,31 @@ PrefabInstance:
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 806956737}
+    - target: {fileID: 6187994065703483105, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Finally the time has come.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187994065703483105, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: I inherited this shop from my grandfather.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187994065703483105, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: It's time to begin a new life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187994065703483105, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: I need to tidy up this place before tomorrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187994065703483105, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
+        type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Tomorrow is going to be a big day.
+      objectReference: {fileID: 0}
     - target: {fileID: 6251237014035574550, guid: b52c34f157ff1cb44a51f4b25c5a2cda,
         type: 3}
       propertyPath: m_Pivot.x

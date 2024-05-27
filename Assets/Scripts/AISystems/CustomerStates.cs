@@ -143,10 +143,13 @@ public class CustomerStates : MonoBehaviour
         anim.SetBool("isSitting", true);
         Vector3 direction = closestTable.transform.position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
-        agent.enabled = false;
-        var obstacle = gameObject.AddComponent<NavMeshObstacle>();
-        obstacle.carving = true;
-        obstacle.size = new Vector3(0.3f, 0.3f, 0.3f);
+        if (agent.enabled)
+        {
+            agent.enabled = false;
+            var obstacle = gameObject.AddComponent<NavMeshObstacle>();
+            obstacle.carving = true;
+            obstacle.size = new Vector3(0.3f, 0.3f, 0.3f);
+        }
 
         if (!ReadyToOrder)
         {

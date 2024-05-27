@@ -116155,8 +116155,10 @@ MonoBehaviour:
   textComponent: {fileID: 8608490472244034094}
   lines:
   - 
-  - asd
-  - asdafs
+  - 'Maid 3: We heard that you are looking for workers.'
+  - 'Maid 4: That''s why we came running!'
+  - 'Maid 2: We needed you so much! It''s getting harder everyday.'
+  - 'Maid 1: Don''t worry guys. We can do this together!'
   textSpeed: 0.05
 --- !u!33 &8948370833010308946
 MeshFilter:
