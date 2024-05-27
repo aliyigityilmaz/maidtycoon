@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 144557576}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (2)
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3585,8 +3585,8 @@ MonoBehaviour:
   mouseSensitivity: 2
   maxVerticalAngle: 90
   minVerticalAngle: 30
-  maxHorizontalAngle: 210
-  minHorizontalAngle: 60
+  maxHorizontalAngle: 180
+  minHorizontalAngle: 90
   zoomSpeed: 100
   maxZoom: 80
   minZoom: 30
@@ -8222,7 +8222,7 @@ GameObject:
   - component: {fileID: 1077560059}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (3)
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13585,7 +13585,7 @@ GameObject:
   - component: {fileID: 1725089957}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (1)
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22675,7 +22675,7 @@ GameObject:
   - component: {fileID: 5459189113948253900}
   m_Layer: 0
   m_Name: ShortTable_Lvl1
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
