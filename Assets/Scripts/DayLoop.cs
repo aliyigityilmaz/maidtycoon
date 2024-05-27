@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,6 +42,8 @@ public class DayLoop : MonoBehaviour
     public int totalIncomeInt;
     private bool endDay = false;
 
+    private float dayendedTimer = 0f;
+
     public GameObject endOfTheDayPanel;
     private void Awake()
     {
@@ -70,7 +73,18 @@ public class DayLoop : MonoBehaviour
             if (CustomerManager.instance.currentCustomers == 0 && endDay == false)
             {
                 EndDay();
+                dayendedTimer = 0f;
                 endDay = true;
+            }
+
+            dayendedTimer += Time.deltaTime;
+            if (dayendedTimer >= 20f)
+            {
+                foreach (var customer in FindObjectsOfType<CustomerStates>())
+                {
+                    customer.GetComponent<CustomerStates>()._Leaving = true;
+                }
+                dayendedTimer = 0f;
             }
             //StartDay();
             

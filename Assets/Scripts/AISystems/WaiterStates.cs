@@ -17,7 +17,7 @@ public class WaiterStates : MonoBehaviour
 
 
     [SerializeField]
-    private GameObject food;
+    public GameObject food;
 
     [Header("ServeCustomer")]
     public GameObject assignedCustomer;
@@ -170,6 +170,11 @@ public class WaiterStates : MonoBehaviour
                     break;
                 }
             }
+        }
+        if(assignedCustomer == null)
+        {
+            currentState = State.Idle;
+            return;
         }
         agent.SetDestination(assignedCustomer.transform.position);
         if (Vector3.Distance(this.transform.position, assignedCustomer.transform.position) < 2f)

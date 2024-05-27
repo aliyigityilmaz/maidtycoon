@@ -221,6 +221,9 @@ public class CustomerStates : MonoBehaviour
 
     private void Leaving()
     {
+        agent.enabled = true;
+        gameObject.GetComponent<NavMeshObstacle>().enabled = false;
+        OrderSystem.instance.RemoveFromWaitingList(this.gameObject);
         anim.SetBool("isWalking", true);
         anim.SetBool("isSitting", false);
 
@@ -235,6 +238,10 @@ public class CustomerStates : MonoBehaviour
             {
                 waiter.GetComponent<WaiterStates>().assignedCustomer = null;
                 waiter.GetComponent<WaiterStates>().foundaCustomer = false;
+                if (waiter.GetComponent<WaiterStates>().food != null)
+                {
+                    waiter.GetComponent<WaiterStates>().food = null;
+                }
                 waiter.GetComponent<WaiterStates>().SetStateIdle();
             }
             else
