@@ -1540,6 +1540,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3ad0f653cb3de4399c4a8d256bd484, type: 3}
+--- !u!114 &379944236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3593667681612146861, guid: 44f3789d7239d56448ffc835d0745cde,
+    type: 3}
+  m_PrefabInstance: {fileID: 4722904045211815489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &411962302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,6 +2263,7 @@ MonoBehaviour:
   currentCustomers: 0
   spawnRate: 1
   spawnTimer: 0
+  canSpawn: 1
 --- !u!1 &580979491
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,6 +8251,8 @@ MonoBehaviour:
   rentText: {fileID: 4722904045211815490}
   soldAmountText: {fileID: 4722904045211815491}
   wageText: {fileID: 1939811669}
+  totalIncome: {fileID: 379944236}
+  totalIncomeInt: 0
   endOfTheDayPanel: {fileID: 1471684337}
 --- !u!114 &2082501671
 MonoBehaviour:

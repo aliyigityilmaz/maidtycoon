@@ -136,6 +136,7 @@ public class WaiterStates : MonoBehaviour
                         food = carriedfood;
                         OrderSystem.instance.OrderCompleted(food.gameObject);
                         DayLoop.instance.AddSold();
+                        DayLoop.instance.AddIncome(food.GetComponent<Food>().foodso.foodValue);
                         Animator.SetBool("isCarrying", true);
                         Animator.SetBool("isWalking", false);
                         currentState = State.Serve;

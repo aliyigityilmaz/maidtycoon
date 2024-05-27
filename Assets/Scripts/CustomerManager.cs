@@ -13,6 +13,8 @@ public class CustomerManager : MonoBehaviour
     public float spawnRate = 1f;
     public float spawnTimer = 0f;
 
+    public bool canSpawn = true;
+
     private int customerCounter;
     private void Awake()
     {
@@ -22,7 +24,7 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentCustomers < maxCustomers)
+        if (currentCustomers < maxCustomers && canSpawn)
         {
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= spawnRate)

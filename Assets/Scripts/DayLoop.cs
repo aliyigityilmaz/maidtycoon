@@ -30,6 +30,10 @@ public class DayLoop : MonoBehaviour
     public TextMeshProUGUI rentText;
     public TextMeshProUGUI soldAmountText;
     public TextMeshProUGUI wageText;
+    public TextMeshProUGUI totalIncome;
+
+    public int totalIncomeInt;
+    private bool endDay = false;
 
     public GameObject endOfTheDayPanel;
     private void Awake()
@@ -42,6 +46,7 @@ public class DayLoop : MonoBehaviour
         economyManager = EconomyManager.instance;
         day = 1;
         dayText.text = day.ToString();
+        totalIncomeInt = 0;
     }
 
     void Update()
@@ -50,10 +55,13 @@ public class DayLoop : MonoBehaviour
         timerImage.fillAmount = currentTime / dayLength;
         if (currentTime >= dayLength)
         {
-            EndDay();
-            day++;
-            dayText.text = day.ToString();
-            currentTime = 0f;
+            currentTime = dayLength;
+            CustomerManager.instance.canSpawn = false;
+            if (CustomerManager.instance.currentCustomers == 0 && endDay == false)
+            {
+                EndDay();
+                endDay = true;
+            }
             //StartDay();
             
         }
@@ -66,9 +74,15 @@ public class DayLoop : MonoBehaviour
 
     public void StartDay()
     {
+        CustomerManager.instance.canSpawn = true;
+        totalIncomeInt = 0;
         howManySold = 0;
+        day++;
+        dayText.text = day.ToString();
+        currentTime = 0f;
         Time.timeScale = 1f;
         endOfTheDayPanel.SetActive(false);
+        endDay = false;
     }
 
     public void EndDay()
@@ -88,10 +102,16 @@ public class DayLoop : MonoBehaviour
         rentText.text = dailyRent.ToString();
         soldAmountText.text = soldAmount.ToString();
         wageText.text = dailyWages.ToString();
+        totalIncome.text = totalIncomeInt.ToString();
     }
 
     public void AddSold()
     {
         howManySold++;
+    }
+
+    public void AddIncome(int income)
+    {
+        totalIncomeInt += income;
     }
 }
