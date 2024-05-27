@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 144557578}
   - component: {fileID: 144557577}
   - component: {fileID: 144557576}
+  - component: {fileID: 144557579}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (2)
   m_TagString: Table
@@ -555,6 +556,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 580979492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &144557579
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144557575}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.00001, y: 0.0035, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.002}
+  m_TimeToStationary: 0.5
 --- !u!114 &158736869 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1158199021229452777, guid: 4464c079ffa8fde419dcef8d8bce3e85,
@@ -4006,6 +4023,7 @@ GameObject:
   - component: {fileID: 1077560061}
   - component: {fileID: 1077560060}
   - component: {fileID: 1077560059}
+  - component: {fileID: 1077560062}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (3)
   m_TagString: Table
@@ -4078,6 +4096,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 227227736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1077560062
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077560058}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.00001, y: 0.0035, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.002}
+  m_TimeToStationary: 0.5
 --- !u!1 &1114734368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,6 +6734,7 @@ GameObject:
   - component: {fileID: 1725089959}
   - component: {fileID: 1725089958}
   - component: {fileID: 1725089957}
+  - component: {fileID: 1725089960}
   m_Layer: 0
   m_Name: ShortTable_Lvl1 (1)
   m_TagString: Table
@@ -6772,6 +6807,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 821260355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1725089960
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725089956}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0025, y: 0.00001, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.002}
+  m_TimeToStationary: 0.5
 --- !u!1 &1748499195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8084272876520364958, guid: 90aa1d69e71e0264e9994bc1a44cc998,
@@ -13491,6 +13542,7 @@ GameObject:
   - component: {fileID: 6542421917351967229}
   - component: {fileID: 2584146747656698734}
   - component: {fileID: 5459189113948253900}
+  - component: {fileID: 6542421917351967230}
   m_Layer: 0
   m_Name: ShortTable_Lvl1
   m_TagString: Table
@@ -16294,6 +16346,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 417628824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &6542421917351967230
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766957360108928243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.00001, y: 0.0035, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: -0.002}
+  m_TimeToStationary: 0.5
 --- !u!23 &6571582017066556774
 MeshRenderer:
   m_ObjectHideFlags: 0
