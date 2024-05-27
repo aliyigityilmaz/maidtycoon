@@ -6906,6 +6906,7 @@ MonoBehaviour:
       m_Calls: []
   pausePanel: {fileID: 1871407908}
   gamePaused: 0
+  isGameStarted: 0
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0

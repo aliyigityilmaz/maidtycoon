@@ -33,7 +33,7 @@ public class EconomyManager : MonoBehaviour
         moneyCountText.text = money.ToString();
         if (Input.GetKeyDown(KeyCode.O))
         {
-            AddMoney(100);
+            AddMoney(10000);
         }
 
         if(money < 0)

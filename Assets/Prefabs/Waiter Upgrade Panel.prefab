@@ -741,7 +741,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1.1
+          m_FloatArgument: 0.8
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1302,7 +1302,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 0.3
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1.3x art\u0131r."
+  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1.5x art\u0131r."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e18f52a795395844ab23f3d1710e45b5, type: 2}
   m_sharedMaterial: {fileID: -7466546512009690380, guid: e18f52a795395844ab23f3d1710e45b5,
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1.1x art\u0131r."
+  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1.3x art\u0131r."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e18f52a795395844ab23f3d1710e45b5, type: 2}
   m_sharedMaterial: {fileID: -7466546512009690380, guid: e18f52a795395844ab23f3d1710e45b5,
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1x art\u0131r."
+  m_text: "Garsonlar\u0131n h\u0131z\u0131n\u0131 1.1x art\u0131r."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e18f52a795395844ab23f3d1710e45b5, type: 2}
   m_sharedMaterial: {fileID: -7466546512009690380, guid: e18f52a795395844ab23f3d1710e45b5,
