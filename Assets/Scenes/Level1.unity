@@ -3460,6 +3460,37 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1026658809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026658810}
+  m_Layer: 0
+  m_Name: SpawnPointForMaids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1026658810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026658809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -35, y: 5.87, z: 11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077560058
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,6 +7714,12 @@ MonoBehaviour:
   gamePaused: 0
   optionsMenu: {fileID: 787603574}
   isGameStarted: 0
+  maids:
+  - {fileID: 7718582273604078300, guid: 692a2892e3e808a48b2a8ddc030deaee, type: 3}
+  - {fileID: 5876103008156998331, guid: 4226c9bc04a95c5459e016a83c5e4a3f, type: 3}
+  - {fileID: 4911529585818288019, guid: 866437db4cb9382489ee28cc566f82df, type: 3}
+  - {fileID: 1388882791311838275, guid: e47a2e02ffdb2f5429f504bdc6717ed5, type: 3}
+  spawnPoint: {fileID: 1026658810}
 --- !u!4 &2082501665
 Transform:
   m_ObjectHideFlags: 0
@@ -18337,6 +18374,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1026658810}
   - {fileID: 1114734370}
   - {fileID: 1129641905}
   - {fileID: 1691365277}
