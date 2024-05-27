@@ -9503,6 +9503,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8396247846807636090, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082501666}
+    - target: {fileID: 8396247846807636090, guid: 9943c1eef9c473c40a3b3b54862b606f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckListMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 9045806438109425258, guid: 9943c1eef9c473c40a3b3b54862b606f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -23038,6 +23048,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067755274}
   m_Mesh: {fileID: -2477511411847689622, guid: 80d064e6790edf84197de8088b77a5bb, type: 3}
+--- !u!114 &1076242063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6394978914470854987, guid: 69b2c8b8987456b49b43103b2226448a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1185830489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1080949895
 GameObject:
   m_ObjectHideFlags: 0
@@ -25512,18 +25534,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1185830489}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1185830496 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2308100414241667478, guid: 69b2c8b8987456b49b43103b2226448a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1185830489}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1185830497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4168813848573383313, guid: 69b2c8b8987456b49b43103b2226448a,
@@ -43064,7 +43074,7 @@ MonoBehaviour:
   allCafeUpgrades: 0
   allWaiterUpgrades: 0
   allFoodUpgrades: 0
-  foodCountText: {fileID: 1185830496}
+  foodCountText: {fileID: 1076242063}
   cafeUpAlreadyMade: 0
   waiterUpAlreadyMade: 0
   foodUpAlreadyMade: 0
