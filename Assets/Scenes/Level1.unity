@@ -7822,7 +7822,7 @@ MonoBehaviour:
   waiterUpgrades: 0
   waiterUpgradesThisLevel: 3
   soldFoodCount: 0
-  requiredFoodCount: 20
+  requiredFoodCount: 10
   allCafeUpgrades: 0
   allWaiterUpgrades: 0
   allFoodUpgrades: 0

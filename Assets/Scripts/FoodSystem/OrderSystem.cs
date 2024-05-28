@@ -4,6 +4,7 @@ using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.Rendering.DebugUI;
 
 public class OrderSystem : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class OrderSystem : MonoBehaviour
 
         // Yeni bir yemek oluþtur
         GameObject food = Instantiate(orderList[randomFood], counter.transform.position, Quaternion.identity);
-
+        food.GetComponent<Food>().value = food.GetComponent<Food>().foodso.foodValue;
         //
 
         food.GetComponent<Food>().value = Mathf.RoundToInt(food.GetComponent<Food>().value * 

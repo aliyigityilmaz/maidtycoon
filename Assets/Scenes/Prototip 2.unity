@@ -36382,9 +36382,9 @@ MonoBehaviour:
   thirdUpgrade: 0
   thirdUpgradeMultiplier: 10
   fourthUpgrade: 0
-  fourthUpgradeMultiplier: 0
+  fourthUpgradeMultiplier: 25
   fifthUpgrade: 0
-  fifthUpgradeMultiplier: 0
+  fifthUpgradeMultiplier: 50
 --- !u!4 &873061290
 Transform:
   m_ObjectHideFlags: 0
@@ -92538,7 +92538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76f69a8f4c839f4c97c9792b2f83127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 100
+  money: 300
   moneyCountText: {fileID: 640801602}
   bustPanel: {fileID: 1631648195}
   isBust: 0

@@ -185,7 +185,7 @@ public class WaiterStates : MonoBehaviour
             CheckList.instance.soldFoodCount++;
             assignedCustomer = null;
             hasFood = false;
-            EconomyManager.instance.AddMoney(food.GetComponent<Food>().foodso.foodValue);
+            EconomyManager.instance.AddMoney(food.GetComponent<Food>().value);
             Destroy(food);
             food = null;
             currentState = State.Idle;

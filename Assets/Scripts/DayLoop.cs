@@ -138,6 +138,10 @@ public class DayLoop : MonoBehaviour
 
     public void StartDay()
     {
+        foreach (var maid in GameObject.FindGameObjectsWithTag("Waiter"))
+        {
+            maid.GetComponent<WaiterStates>().SetStateIdle();
+        }
         CustomerManager.instance.canSpawn = true;
         totalIncomeInt = 0;
         howManySold = 0;
